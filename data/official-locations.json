@@ -1,0 +1,663 @@
+{
+  "https://odishatourism.gov.in/en/w/debrigarh-wildlife-sanctuary": {
+    "latitude": 21.500648500000004,
+    "longitude": 83.77115239999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/debrigarh-wildlife-sanctuary",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/duduma-waterfall": {
+    "latitude": 18.5206888,
+    "longitude": 82.4332781554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/duduma-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/joranda-waterfall": {
+    "latitude": 21.9376865,
+    "longitude": 86.40426555,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/joranda-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kalabhoomi-odisha-craft-museum": {
+    "latitude": 20.2521551,
+    "longitude": 85.80760719999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kalabhoomi-odisha-craft-museum",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/gandahati-waterfall": {
+    "latitude": 18.889274200000006,
+    "longitude": 84.2521226554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/gandahati-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kanhakund-the-grand-canyon-of-odisha": {
+    "latitude": 22.321068,
+    "longitude": 84.00529139999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kanhakund-the-grand-canyon-of-odisha",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/gopalpur-sea-beach": {
+    "latitude": 19.25724,
+    "longitude": 84.89129405541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/gopalpur-sea-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/gundicha-ghagi-waterfall": {
+    "latitude": 21.348299200000003,
+    "longitude": 85.82212249999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/gundicha-ghagi-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/gupteswar-cave-temple": {},
+  "https://odishatourism.gov.in/en/w/harisankar-temple": {
+    "latitude": 20.467955499999995,
+    "longitude": 85.03763769999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/harisankar-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/hirakud-dam": {
+    "latitude": 21.53407890000002,
+    "longitude": 83.85713185541995,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/hirakud-dam",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/dhabaleswar-temple": {
+    "latitude": 20.192308599999993,
+    "longitude": 85.8222492554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/dhabaleswar-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/dhauli-shanti-stupa-dhauli-hills": {
+    "latitude": 20.192428500000002,
+    "longitude": 85.839466,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/dhauli-shanti-stupa-dhauli-hills",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/devkund-waterfall": {
+    "latitude": 18.4820919,
+    "longitude": 73.38477865541994,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/devkund-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kapilash-temple": {
+    "latitude": 20.682649,
+    "longitude": 85.763623,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kapilash-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kataka-silver-filigree-hub": {
+    "latitude": 20.46310735,
+    "longitude": 85.86774584999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kataka-silver-filigree-hub",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/khandadhar-waterfall": {
+    "latitude": 21.761785000000003,
+    "longitude": 85.11985039999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/khandadhar-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/khiching-temple-kichakeswari-temple": {
+    "latitude": 21.92764485630221,
+    "longitude": 85.83002227396328,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/khiching-temple-kichakeswari-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/killa-dalijoda": {
+    "latitude": 20.6099004,
+    "longitude": 85.88119239999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/killa-dalijoda",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kolab-dam": {
+    "latitude": 18.788307900000007,
+    "longitude": 82.58229895541993,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kolab-dam",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/konark-sun-temple": {
+    "latitude": 19.887595299999997,
+    "longitude": 86.0945364,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/konark-sun-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/bhimkand-sleeping-vishnu": {
+    "latitude": 19.57405616163612,
+    "longitude": 82.70726749128457,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/bhimkand-sleeping-vishnu",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/bhimkund-waterfall": {
+    "latitude": 21.502538053485566,
+    "longitude": 85.6059447143447,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/bhimkund-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/bhitarkanika-national-park": {
+    "latitude": 20.715695580856405,
+    "longitude": 86.81192757434064,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/bhitarkanika-national-park",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/barabati-fort": {
+    "latitude": 20.484531081032042,
+    "longitude": 85.86260177433304,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/barabati-fort",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/astaranga-beach": {
+    "latitude": 19.930691353322853,
+    "longitude": 86.27192183686631,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/astaranga-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/bada-ghagara-waterfall": {
+    "latitude": 21.60870878018978,
+    "longitude": 85.5531760743708,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/bada-ghagara-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/barehipani-waterfall": {
+    "latitude": 21.932889600000006,
+    "longitude": 86.37568118885494,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/barehipani-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ananta-basudeva-temple": {
+    "latitude": 20.240572681218733,
+    "longitude": 85.8332268743251,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ananta-basudeva-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/biraja-temple": {
+    "latitude": 20.83376488076718,
+    "longitude": 86.33544697434455,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/biraja-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/birsa-munda-international-hockey-stadium": {
+    "latitude": 22.245612479725946,
+    "longitude": 84.811253174393,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/birsa-munda-international-hockey-stadium",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/chandaka-wildlife-sanctuary": {
+    "latitude": 20.348811661783433,
+    "longitude": 85.5198097229004,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/chandaka-wildlife-sanctuary",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/chandipur-beach": {
+    "latitude": 21.439846535025676,
+    "longitude": 87.01411403766569,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/chandipur-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/chandrabhaga-beach": {
+    "latitude": 19.867069281507195,
+    "longitude": 86.11391577431313,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/chandrabhaga-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/daringbadi-coffee-garden": {
+    "latitude": 19.89488588148573,
+    "longitude": 84.11320367431406,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/daringbadi-coffee-garden",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/daringbadi-hill-station": {
+    "latitude": 19.881037491072988,
+    "longitude": 83.875360040926,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/daringbadi-hill-station",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ramachandi-beach": {
+    "latitude": 19.85439915,
+    "longitude": 86.0597478,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ramachandi-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/mangalajodi": {
+    "latitude": 19.9151738,
+    "longitude": 85.4168718554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/mangalajodi",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/regional-museum-of-natural-history": {
+    "latitude": 12.30555,
+    "longitude": 76.67436649999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/regional-museum-of-natural-history",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ratnagiri-monastery": {
+    "latitude": 20.6432055,
+    "longitude": 86.3379556,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ratnagiri-monastery",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/rambha-palace": {
+    "latitude": 19.516070199999998,
+    "longitude": 85.0925504,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/rambha-palace",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/maniabandha-handloom-village": {
+    "latitude": 20.441041900000002,
+    "longitude": 85.41695385541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/maniabandha-handloom-village",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sahasra-shivalinga-temple": {
+    "latitude": 18.99493980000001,
+    "longitude": 82.99533405541993,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sahasra-shivalinga-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sadeibarani-dhokra-handicraft-village": {
+    "latitude": 20.579679699815877,
+    "longitude": 85.58680042433578,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sadeibarani-dhokra-handicraft-village",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sanaghagara-waterfall": {
+    "latitude": 21.632772,
+    "longitude": 85.5569556,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sanaghagara-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/satkosia-gorge-tiger-reserve": {
+    "latitude": 20.560734200000006,
+    "longitude": 84.77648415541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/satkosia-gorge-tiger-reserve",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/shree-jagannath-temple": {
+    "latitude": 19.804937900000002,
+    "longitude": 85.79991415541991,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/shree-jagannath-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/similipal-national-park": {
+    "latitude": 21.5931151,
+    "longitude": 86.29453989999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/similipal-national-park",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sitakund-waterfall": {
+    "latitude": 21.9290349,
+    "longitude": 86.55328495541991,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sitakund-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/lalitagiri-buddhist-complex": {
+    "latitude": 20.590255300000003,
+    "longitude": 86.2524001,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/lalitagiri-buddhist-complex",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/pentha-beach": {
+    "latitude": 20.53963485,
+    "longitude": 86.7883534,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/pentha-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/puri-blue-flag-beach": {
+    "latitude": 19.797937,
+    "longitude": 85.816923,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/puri-blue-flag-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/raghunath-jew-temple": {
+    "latitude": 20.1369213,
+    "longitude": 85.13529255541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/raghunath-jew-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/rajarani-temple": {
+    "latitude": 20.243487100000003,
+    "longitude": 85.8434906,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/rajarani-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/maa-tarini-temple": {
+    "latitude": 19.8276611,
+    "longitude": 85.27222485541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/maa-tarini-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/paradip-port-beach": {
+    "latitude": 20.28170260000001,
+    "longitude": 86.6546632554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/paradip-port-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kuldiha-wildlife-sanctuary": {
+    "latitude": 21.4092041,
+    "longitude": 86.7301665,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kuldiha-wildlife-sanctuary",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ladu-baba-temple": {
+    "latitude": 20.02807610113051,
+    "longitude": 85.08811820478515,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ladu-baba-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/maa-balakumari-temple": {
+    "latitude": 19.2001801,
+    "longitude": 84.6386966,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/maa-balakumari-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/parasurameswar-temple": {
+    "latitude": 20.2431211,
+    "longitude": 85.82108445541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/parasurameswar-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/pipili": {
+    "latitude": 20.10435015,
+    "longitude": 85.8355531,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/pipili",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/leaning-temple-of-huma": {
+    "latitude": 21.2807423,
+    "longitude": 83.9122995,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/leaning-temple-of-huma",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/puri-beach-golden-beach": {
+    "latitude": 19.795170000000002,
+    "longitude": 85.829288,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/puri-beach-golden-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/lingaraj-temple": {
+    "latitude": 20.238451899999998,
+    "longitude": 85.8337767,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/lingaraj-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/maa-kalijai-temple": {
+    "latitude": 19.665231700000007,
+    "longitude": 85.19862855541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/maa-kalijai-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ram-mandir-fatehgarh": {
+    "latitude": 20.2915449,
+    "longitude": 85.3246334,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ram-mandir-fatehgarh",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/mahendragiri-hills": {
+    "latitude": 18.9666276,
+    "longitude": 84.34673855541993,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/mahendragiri-hills",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/talasari-beach": {
+    "latitude": 21.606827500000005,
+    "longitude": 87.4550926554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/talasari-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/tara-tarini-temple": {
+    "latitude": 19.488974099999997,
+    "longitude": 84.8990919,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/tara-tarini-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/tampara-lake": {
+    "latitude": 19.352258199999998,
+    "longitude": 85.0034941,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/tampara-lake",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/udayagiri-khandagiri-caves": {
+    "latitude": 20.184112395983338,
+    "longitude": 84.81802969598235,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/udayagiri-khandagiri-caves",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/midhubandha-waterfall": {
+    "latitude": 19.8041625,
+    "longitude": 84.0706943,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/midhubandha-waterfall",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/minajhola": {
+    "latitude": 19.52541099999999,
+    "longitude": 83.72021575541993,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/minajhola",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/mukteswara-temple": {
+    "latitude": 20.2427055,
+    "longitude": 85.82242545541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/mukteswara-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/nrusinghanath-temple": {
+    "latitude": 20.895998600000002,
+    "longitude": 82.80098962554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/nrusinghanath-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/museum-of-justice": {
+    "latitude": 20.485635100000003,
+    "longitude": 85.86405309999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/museum-of-justice",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/udayagiri-monastery": {
+    "latitude": 20.64170450000002,
+    "longitude": 86.23887641833134,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/udayagiri-monastery",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ved-vyas-temple": {
+    "latitude": 22.236843,
+    "longitude": 84.784292,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ved-vyas-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sonapur-blue-flag-beach": {
+    "latitude": 19.1064875,
+    "longitude": 84.78179689999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sonapur-blue-flag-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/tikarpada-wildlife-sanctuary": {
+    "latitude": 20.685177900000003,
+    "longitude": 84.9001201,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/tikarpada-wildlife-sanctuary",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/nandankanan-zoological-park": {
+    "latitude": 20.3957735,
+    "longitude": 85.8259661,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/nandankanan-zoological-park",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/neelamadhaba-temple-kantilo": {
+    "latitude": 20.364590200000002,
+    "longitude": 85.19513189999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/neelamadhaba-temple-kantilo",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/kardola-weavers-village": {
+    "latitude": 21.3306798,
+    "longitude": 83.90270589999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/kardola-weavers-village",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/odi-art-museum": {
+    "latitude": 19.7167122,
+    "longitude": 85.1899248,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/odi-art-museum",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/odisha-state-musuem": {
+    "latitude": 20.256244199999998,
+    "longitude": 85.8409178,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/odisha-state-musuem",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/panchalingeswar-temple": {
+    "latitude": 21.4110791,
+    "longitude": 86.7198813,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/panchalingeswar-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/niladri-beach": {
+    "latitude": 19.799934000000004,
+    "longitude": 85.835422,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/niladri-beach",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/odisha-state-maritime-museum": {
+    "latitude": 20.478926299999994,
+    "longitude": 85.89618229999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/odisha-state-maritime-museum",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/bhetnoi-blackbuck-habitat": {
+    "latitude": 19.559790136497398,
+    "longitude": 84.07313140712846,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/bhetnoi-blackbuck-habitat",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/museum-of-tribal-arts-artifacts": {
+    "latitude": 13.0046332,
+    "longitude": 77.59990619999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/museum-of-tribal-arts-artifacts",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/bara-bakhra-caves": {
+    "latitude": 21.5819722802094,
+    "longitude": 83.56971437393406,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/bara-bakhra-caves",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/chausathi-yogini-temple-hirapur": {
+    "latitude": 20.22495688123083,
+    "longitude": 85.87616567432461,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/chausathi-yogini-temple-hirapur",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/satapada-chilika": {
+    "latitude": 19.66838631440418,
+    "longitude": 85.42368949239767,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/satapada-chilika",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/raghurajpur-craft-village": {
+    "latitude": 19.885509400000004,
+    "longitude": 85.80777995541989,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/raghurajpur-craft-village",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/chilika-lake": {
+    "latitude": 19.687150204814273,
+    "longitude": 85.0489958778376,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/chilika-lake",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/killa-aali-palace": {
+    "latitude": 20.692112599999998,
+    "longitude": 86.6483604,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/killa-aali-palace",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/khandadhar-kendujhar": {
+    "latitude": 21.942996659464363,
+    "longitude": 84.2013947743266,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/khandadhar-kendujhar",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sitabinji-fresco-painting": {
+    "latitude": 21.50857,
+    "longitude": 85.77978519999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sitabinji-fresco-painting",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/netaji-birth-place-museum-oriya-bazaar-kataka": {
+    "latitude": 20.4700673,
+    "longitude": 85.86680009999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/netaji-birth-place-museum-oriya-bazaar-kataka",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/hanuman-vatika": {
+    "latitude": 22.221724199999997,
+    "longitude": 84.8135096554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/hanuman-vatika",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/sabara-srikshetra-jagannath-temple-koraput": {
+    "latitude": 18.810779200000002,
+    "longitude": 82.7092081,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/sabara-srikshetra-jagannath-temple-koraput",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/maa-samaleswari-temple": {
+    "latitude": 21.473955799999995,
+    "longitude": 83.95908659999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/maa-samaleswari-temple",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/chausathi-yogini-ranipur-jharial": {
+    "latitude": 20.28251459999999,
+    "longitude": 82.9460856554199,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/chausathi-yogini-ranipur-jharial",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/padma-sambhava-maha-vihara-monastery-jirango": {
+    "latitude": 15.851911,
+    "longitude": 80.115031,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/padma-sambhava-maha-vihara-monastery-jirango",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/mandasaru-valley": {
+    "latitude": 19.965199950000002,
+    "longitude": 84.22421994999999,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/mandasaru-valley",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/mahimagadi-joranda": {
+    "latitude": 20.78687290000001,
+    "longitude": 85.70910565541992,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/mahimagadi-joranda",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/deomali-hills": {
+    "latitude": 18.6686028,
+    "longitude": 82.97180635541991,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/deomali-hills",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/ansupa-nature-camp-1": {
+    "latitude": 20.45358,
+    "longitude": 85.5935039,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/ansupa-nature-camp-1",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/the-belgadia-palace-2": {
+    "latitude": 21.942724600000002,
+    "longitude": 86.72363740000002,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/the-belgadia-palace-2",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/gajlaxmi-palace": {
+    "latitude": 20.6491029,
+    "longitude": 85.6363588,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/gajlaxmi-palace",
+    "coordinateStatus": "official-map-approximate"
+  },
+  "https://odishatourism.gov.in/en/w/dhenkanal-palace": {
+    "latitude": 20.647887,
+    "longitude": 85.597894,
+    "coordinateSource": "https://odishatourism.gov.in/en/w/dhenkanal-palace",
+    "coordinateStatus": "official-map-approximate"
+  }
+}

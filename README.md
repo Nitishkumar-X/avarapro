@@ -12,11 +12,11 @@ Open http://127.0.0.1:5173. No package installation or build is required. Extern
 
 ## What works
 
-- Destination discovery, search, district/category/distance/budget filters, India scope, and a map.
+- 194 destination entries, paginated search, district/category/distance/budget filters, photo-only and unvisited filters, quick escape suggestions, India scope, and a map.
 - Destination details with official overview links and explicit information status.
-- A saved bucket list, ordered journey stops, driving-route links, and a downloadable itinerary.
+- Three-place comparison, quick journey additions, nearby-stop ordering, individual travel legs, driving-route links, and a downloadable itinerary.
 - Editable fuel, mileage, speed, road-distance assumptions, food, stay, activity, and contingency budgets.
-- A personal passport with dated stamps, field notes, district counts, a yearly goal, and milestones.
+- A personal passport with dated stamps, field notes, district counts, yearly bucket lists, a yearly goal, and milestones.
 - Browser-local persistence with passport backup export/import.
 - Desktop and mobile layouts, visible keyboard focus, native dialogs, and reduced-motion support.
 
@@ -26,9 +26,11 @@ Cuttack city centre; ₹110/litre petrol; 70 km/h cruising assumption. Mileage s
 
 ## Information status
 
-The inherited catalogue contains 105 Odisha and 39 India records. Source discovery and selected official overview summaries were added during the rebuild. The entire catalogue, current tariffs, permits, openings, facilities, and travel conditions have **not** been independently verified. The website does not claim otherwise. There is no live price, traffic, weather, or automatic data-refresh service.
+The current catalogue contains 155 Odisha and 39 India entries. The official Odisha Tourism directory contributed 111 source-linked records, including 53 additional attractions. Three repeated inherited entries are consolidated without losing passport data. See `CATALOGUE-SOURCES.md` for coverage and import instructions. Current tariffs, permits, openings, facilities, and travel conditions have **not** been independently verified. There is no live price, traffic, weather, or automatic data-refresh service.
 
-The generated hero artwork is labeled as an illustration. Named place photographs are remote Odisha Tourism references with attribution; reuse rights are not established. Places without sourced photos use explicit placeholders. Personal records stay in the current browser and do not sync between devices or between local and hosted origins. Existing legacy storage is preserved.
+The home hero now uses a real Deomali photograph. Destination photos come from Odisha Tourism and Wikipedia/Wikimedia, with exact subjects and attribution links. Reuse rights are not assumed. Places without sourced photos use explicit placeholders. Personal records stay in the current browser and do not sync between devices or between local and hosted origins. Existing legacy storage is preserved.
+
+Supabase SQL migration, catalogue seed, and setup notes are in `supabase/`. The schema is prepared and locally tested; the current website has no Supabase account connection or cloud sync.
 
 ## Validation
 

@@ -19,3 +19,6 @@ yarn-error.log*
 # Generated deployment archive and separate Sites source checkout
 avara-pro.tar.gz
 avara-site/
+.qa/
+official-directory.html
+sample-place.html

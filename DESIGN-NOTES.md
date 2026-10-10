@@ -4,7 +4,7 @@
 
 The property landing-page reference supplies warm cream, deep olive, generous space, fine editorial headings, and a quiet premium tone. Exploration Hub supplies rounded panoramic imagery, soft pill controls, compact functional overlays, and a feeling of discovery. The travel agency reference supplies a clear sequence from inspiration into destinations and practical exploration. These are visual references, not copied layouts or instructions.
 
-The resulting identity is Avara Pro: cream `#f5f3e9`, olive `#596541`, dark ink `#292f23`, Italiana display type, and DM Sans interface type. There is one visual system, four main navigation items, visible keyboard focus, native destination dialogs, and reduced-motion support. No custom cursor or forced audio is used.
+The resulting identity is Avara Pro: cream `#f5f3e9`, olive `#596541`, dark ink `#292f23`, readable Manrope headings, and DM Sans interface type. Only “Somewhere good is closer than you think” retains Italiana, as requested. There is one visual system, four main navigation items, visible keyboard focus, native destination dialogs, and reduced-motion support.
 
 ## Personal planning defaults
 
@@ -20,9 +20,9 @@ The resulting identity is Avara Pro: cream `#f5f3e9`, olive `#596541`, dark ink 
 
 ## Data and photography
 
-The inherited datasets contain 105 Odisha and 39 India records. IDs and coordinate presence were checked, but the catalogue is not certified as factually complete. No inherited VERIFIED badges or load-time verification dates are exposed. Current fees are not shown as confirmed tariffs. Official overview links distinguish source discovery from tariff/access checks.
+The current catalogue contains 155 Odisha and 39 India entries. Official directory imports and map coordinates broaden the inherited data, while canonical aliases remove three repeated cards. The catalogue is not certified as factually complete. Current fees are not shown as confirmed tariffs. Official overview links distinguish source discovery from tariff/access checks. Current coverage and import instructions are in `CATALOGUE-SOURCES.md`.
 
-The home illustration was generated specifically for this project and is labeled as AI artwork, not a real destination photograph. It is stored at `assets/avara-journey.png`.
+The home hero now uses a real Deomali image from Odisha Tourism; the supporting editorial section shows Konark. The original generated illustration is retained at `assets/avara-journey.png` for reference.
 
 Remote location photo references were discovered from these official pages on 10 October 2026:
 
