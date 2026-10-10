@@ -31,7 +31,7 @@ The current catalogue contains 459 Odisha and 243 other India entries. The offic
 
 Discover only recommends unvisited entries; its real place hero and editorial photographs also move on when their destination is visited. Destination photos come from Odisha Tourism and Wikipedia/Wikimedia, with exact subjects and attribution links. Reuse rights are not assumed. Places without sourced photos use explicit placeholders. Personal records stay in the current browser until explicitly saved online through My account. Account backup/restore is manual; local and hosted origins keep separate local data. Existing legacy storage is preserved.
 
-Supabase SQL migration, catalogue seed, and setup notes are in `supabase/`. The schema is already applied in the connected project. After this catalogue expansion, run the updated idempotent seed.sql in SQL Editor; do not rerun the initial migration. My account provides email/password Auth and explicit owner-protected cloud backups.
+Supabase SQL migration, catalogue seed, and setup notes are in `supabase/`. The schema is already applied in the connected project. After this catalogue expansion, run the numbered files in `supabase/sql-editor/` in SQL Editor (see its README); do not rerun the initial migration. My account provides email/password Auth and explicit owner-protected cloud backups.
 
 ## Validation
 

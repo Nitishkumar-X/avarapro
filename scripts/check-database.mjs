@@ -3,8 +3,23 @@ import fs from 'node:fs';import assert from 'node:assert/strict';
 const db=new PGlite(),A='11111111-1111-4111-8111-111111111111',B='22222222-2222-4222-8222-222222222222';
 await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth,public to anon,authenticated,service_role;grant execute on function auth.uid() to anon,authenticated;insert into auth.users values('${A}'),('${B}');`);
 await db.exec(fs.readFileSync('supabase/migrations/202610110001_avara.sql','utf8'));
-await db.exec(fs.readFileSync('supabase/seed.sql','utf8'));
-await db.exec(fs.readFileSync('supabase/seed.sql','utf8')); // Safe to apply the seed twice.
+const chunked=process.argv.includes('--sql-editor');
+let seedFiles=['supabase/seed.sql'];
+if(chunked){
+ const manifest=JSON.parse(fs.readFileSync('supabase/sql-editor/manifest.json','utf8'));
+ seedFiles=manifest.files.map(file=>{
+  const path='supabase/sql-editor/'+file.name,content=fs.readFileSync(path,'utf8');
+  assert.equal(Buffer.byteLength(content),file.bytes);assert.ok(file.bytes<=manifest.maxBytes);
+  assert.match(content,/\nbegin;\n/);assert.match(content,/\ncommit;\n$/);
+  return path;
+ });
+ const statements=seedFiles.map(path=>fs.readFileSync(path,'utf8').split('\nbegin;\n')[1].replace(/\ncommit;\n$/,'')).join('\n');
+ const full=fs.readFileSync('supabase/seed.sql','utf8').split('\nbegin;\n')[1].replace(/\ncommit;\n$/,'');
+ assert.equal(statements,full,'Chunked seed must preserve every statement in order');
+}
+for(let pass=0;pass<2;pass++)for(const path of seedFiles)await db.exec(fs.readFileSync(path,'utf8'));
+assert.equal(Number((await db.query('select count(*) as n from avara_photos where is_cover')).rows[0].n),367);
+console.log('Validated '+(chunked?seedFiles.length+' SQL Editor batches':'full seed')+' twice');
 const dest=(await db.query('select id from avara_destinations limit 1')).rows[0].id;
 const dest2=(await db.query('select id from avara_destinations offset 1 limit 1')).rows[0].id;
 const role=async(r,u='')=>{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[u]);await db.exec('set role '+r)};

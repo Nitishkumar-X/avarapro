@@ -1,6 +1,6 @@
 # Avara Pro database
 
-Apply `migrations/202610110001_avara.sql` once through the Supabase SQL Editor or Supabase CLI, then `seed.sql`. Tables are prefixed `avara_` to avoid collisions with unrelated application tables. The migration is transactional and does not replace existing tables.
+Apply `migrations/202610110001_avara.sql` once through the Supabase SQL Editor or Supabase CLI, then the numbered [SQL Editor batches](sql-editor/README.md), or `seed.sql` through the CLI. Tables are prefixed `avara_` to avoid collisions with unrelated application tables. The migration is transactional and does not replace existing tables.
 
 The catalog models destinations, source provenance, attributed photographs, and dated visitor facts. Unknown fees, coordinates, and image licences remain null or unknown. Sources distinguish official tourism pages from reference articles. The seed publishes the editorial catalogue; publication does not mean verified tariffs or access.
 
@@ -30,4 +30,7 @@ No live account was created during validation; authenticated save/restore must b
 
 ## Catalogue expansion update
 
-You have already applied the schema and original seed. Run the updated seed.sql in SQL Editor to add the expanded 702-entry catalogue and photo metadata to your existing project. It is idempotent and touches catalogue tables only; it does not replace personal passports. No new schema migration is required for quick visit marking or the graphical Passport. The site can browse the new bundled entries immediately even before the updated seed is applied.
+You have already applied the schema and original seed. Run `sql-editor/01-seed.sql` through `sql-editor/24-seed.sql` in order, one file per SQL Editor query, then `sql-editor/verify.sql` to add the expanded 702-entry catalogue and photo metadata to your existing project. It is idempotent and touches catalogue tables only; it does not replace personal passports. No new schema migration is required for quick visit marking or the graphical Passport. The site can browse the new bundled entries immediately even before the updated seed is applied.
+
+
+The full seed exceeds the SQL Editor query limit. The 24 batches each stay below 48 KiB and preserve complete SQL statements and dependency order. Validate this import path with `node scripts/check-database.mjs --sql-editor`; it applies every batch twice before checking catalogue counts and permissions.

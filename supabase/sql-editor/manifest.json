@@ -1,0 +1,125 @@
+{
+  "maxBytes": 49152,
+  "files": [
+    {
+      "name": "01-seed.sql",
+      "bytes": 49000,
+      "statements": 82
+    },
+    {
+      "name": "02-seed.sql",
+      "bytes": 49017,
+      "statements": 81
+    },
+    {
+      "name": "03-seed.sql",
+      "bytes": 49040,
+      "statements": 68
+    },
+    {
+      "name": "04-seed.sql",
+      "bytes": 48229,
+      "statements": 79
+    },
+    {
+      "name": "05-seed.sql",
+      "bytes": 48978,
+      "statements": 73
+    },
+    {
+      "name": "06-seed.sql",
+      "bytes": 48903,
+      "statements": 93
+    },
+    {
+      "name": "07-seed.sql",
+      "bytes": 49102,
+      "statements": 96
+    },
+    {
+      "name": "08-seed.sql",
+      "bytes": 49039,
+      "statements": 84
+    },
+    {
+      "name": "09-seed.sql",
+      "bytes": 48681,
+      "statements": 80
+    },
+    {
+      "name": "10-seed.sql",
+      "bytes": 49052,
+      "statements": 79
+    },
+    {
+      "name": "11-seed.sql",
+      "bytes": 48601,
+      "statements": 80
+    },
+    {
+      "name": "12-seed.sql",
+      "bytes": 48751,
+      "statements": 80
+    },
+    {
+      "name": "13-seed.sql",
+      "bytes": 48804,
+      "statements": 80
+    },
+    {
+      "name": "14-seed.sql",
+      "bytes": 48947,
+      "statements": 80
+    },
+    {
+      "name": "15-seed.sql",
+      "bytes": 48574,
+      "statements": 80
+    },
+    {
+      "name": "16-seed.sql",
+      "bytes": 48818,
+      "statements": 89
+    },
+    {
+      "name": "17-seed.sql",
+      "bytes": 48862,
+      "statements": 92
+    },
+    {
+      "name": "18-seed.sql",
+      "bytes": 48966,
+      "statements": 95
+    },
+    {
+      "name": "19-seed.sql",
+      "bytes": 49076,
+      "statements": 92
+    },
+    {
+      "name": "20-seed.sql",
+      "bytes": 48288,
+      "statements": 92
+    },
+    {
+      "name": "21-seed.sql",
+      "bytes": 48872,
+      "statements": 95
+    },
+    {
+      "name": "22-seed.sql",
+      "bytes": 49106,
+      "statements": 94
+    },
+    {
+      "name": "23-seed.sql",
+      "bytes": 48989,
+      "statements": 93
+    },
+    {
+      "name": "24-seed.sql",
+      "bytes": 48738,
+      "statements": 94
+    }
+  ]
+}
