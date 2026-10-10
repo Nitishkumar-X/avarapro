@@ -20,7 +20,7 @@ Old browser destination IDs resolve through `avara_destination_aliases`. Resolve
 
 ## Connected project
 
-Project: https://ezfghaureqafuvmxvnav.supabase.co. The initial connected catalogue contained 194 destinations. The current bundled catalogue and updated seed contain 702 entries and 367 photos. The original apply-once migration is already present; do not rerun it against this project. No database password or service key is used by the website.
+Project: https://ezfghaureqafuvmxvnav.supabase.co. The initial connected catalogue contained 194 destinations. The current bundled catalogue and updated seed contain 702 entries and 406 photos. The original apply-once migration is already present; do not rerun it against this project. No database password or service key is used by the website.
 
 My account uses the bundled official Supabase JS SDK 2.117.3 and the supplied publishable key. Email/password sign-in and registration use Supabase Auth. Save online explicitly snapshots the browser passport in one owner-protected avara_trips row named Avara passport backup, under assumptions.passport (format avara-cloud-v1). Restore merges saves, visits, notes, yearly targets and route overrides; validated online bike settings, goal, checklist and journey replace their local equivalents. Signing out leaves local data on the device. This is manual cloud backup, not automatic synchronization or writes to the normalized visit/preference tables. The catalogue continues to use its bundled offline-friendly dataset.
 
@@ -30,7 +30,9 @@ No live account was created during validation; authenticated save/restore must b
 
 ## Catalogue expansion update
 
-You have already applied the schema and original seed. Run `sql-editor/01-seed.sql` through `sql-editor/24-seed.sql` in order, one file per SQL Editor query, then `sql-editor/verify.sql` to add the expanded 702-entry catalogue and photo metadata to your existing project. It is idempotent and touches catalogue tables only; it does not replace personal passports. No new schema migration is required for quick visit marking or the graphical Passport. The site can browse the new bundled entries immediately even before the updated seed is applied.
+You have already applied the schema and original seed. Run `sql-editor/01-seed.sql` through `sql-editor/25-seed.sql` in order, one file per SQL Editor query, then `sql-editor/verify.sql` to add the expanded 702-entry catalogue and photo metadata to your existing project. It is idempotent and touches catalogue tables only; it does not replace personal passports. No new schema migration is required for quick visit marking or the graphical Passport. The site can browse the new bundled entries immediately even before the updated seed is applied.
 
 
-The full seed exceeds the SQL Editor query limit. The 24 batches each stay below 48 KiB and preserve complete SQL statements and dependency order. Validate this import path with `node scripts/check-database.mjs --sql-editor`; it applies every batch twice before checking catalogue counts and permissions.
+The full seed exceeds the SQL Editor query limit. The 25 batches each stay below 48 KiB and preserve complete SQL statements and dependency order. Validate this import path with `node scripts/check-database.mjs --sql-editor`; it applies every batch twice before checking catalogue counts and permissions.
+
+For the latest 39 additional photos, use the independent files in photo-update/. No need to repeat the full catalogue import.

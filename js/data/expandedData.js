@@ -14030,6 +14030,552 @@ window.EXPANDED_DATA = {
         "summary": "Article-associated photo subject: Saptasajya. Confirm current visitor access locally.",
         "checkedAt": "2026-10-11"
       }
+    },
+    "od_bhattarika": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Bhattarika.JPG/960px-Bhattarika.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Bhattarika_Temple",
+        "label": "Bhattarika Temple · Wikimedia / Wikipedia",
+        "subject": "Bhattarika Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Bhattarika_Temple",
+        "summary": "Photo shows Bhattarika Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_barehipani": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Barehipani_Falls.jpg/960px-Barehipani_Falls.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Barehipani_Falls",
+        "label": "Barehipani Falls · Wikimedia / Wikipedia",
+        "subject": "Barehipani Falls",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Barehipani_Falls",
+        "summary": "Photo shows Barehipani Falls. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_sanaghagara": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Sanaghagara_Kendujhar.jpg/960px-Sanaghagara_Kendujhar.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Sanaghagara_Waterfall",
+        "label": "Sanaghagara Waterfall · Wikimedia / Wikipedia",
+        "subject": "Sanaghagara Waterfall",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sanaghagara_Waterfall",
+        "summary": "Photo shows Sanaghagara Waterfall. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_khandadhar_sng": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/68/Khandadhar_Waterfall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Khandadhar_Falls_(Sundargarh)",
+        "label": "Khandadhar Falls (Sundargarh) · Wikimedia / Wikipedia",
+        "subject": "Khandadhar Falls (Sundargarh)",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Khandadhar_Falls_(Sundargarh)",
+        "summary": "Photo shows Khandadhar Falls (Sundargarh). A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_mandira_dam": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/MANDIRA_DAM.jpg/960px-MANDIRA_DAM.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Mandira_Dam",
+        "label": "Mandira Dam · Wikimedia / Wikipedia",
+        "subject": "Mandira Dam",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Mandira_Dam",
+        "summary": "Photo shows Mandira Dam. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_akhandalamani": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Akhandalamani_Mandir.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Akhandalamani_Temple",
+        "label": "Akhandalamani Temple · Wikimedia / Wikipedia",
+        "subject": "Akhandalamani Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Akhandalamani_Temple",
+        "summary": "Photo shows Akhandalamani Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_sarala_temple": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sarala_Temple_Small.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Sarala_Temple",
+        "label": "Sarala Temple · Wikimedia / Wikipedia",
+        "subject": "Sarala Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sarala_Temple",
+        "summary": "Photo shows Sarala Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_chatikona": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Shiv_Temple_%26_Waterfall_at_Chatikana.JPG/960px-Shiv_Temple_%26_Waterfall_at_Chatikana.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Chatikona",
+        "label": "Chatikona · Wikimedia / Wikipedia",
+        "subject": "Chatikona",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Chatikona",
+        "summary": "Photo shows Chatikona. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_karlapat": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Location_Map_of_Karlapt_Wildlife_Sanctuary%2C_Odisha%2C_India.jpg/960px-Location_Map_of_Karlapt_Wildlife_Sanctuary%2C_Odisha%2C_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Karlapat_Wildlife_Sanctuary",
+        "label": "Karlapat Wildlife Sanctuary · Wikimedia / Wikipedia",
+        "subject": "Karlapat Wildlife Sanctuary",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Karlapat_Wildlife_Sanctuary",
+        "summary": "Photo shows Karlapat Wildlife Sanctuary. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_subarnameru": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Subarnameru_Sonepur_Subarnapur_district_Odisha.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Subarnameru_Temple",
+        "label": "Subarnameru Temple · Wikimedia / Wikipedia",
+        "subject": "Subarnameru Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Subarnameru_Temple",
+        "summary": "Photo shows Subarnameru Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_koili_ghoghar": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Koilighugar_waterfall.jpg/960px-Koilighugar_waterfall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Koilighugar_Waterfall",
+        "label": "Koilighugar Waterfall · Wikimedia / Wikipedia",
+        "subject": "Koilighugar Waterfall",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Koilighugar_Waterfall",
+        "summary": "Photo shows Koilighugar Waterfall. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_sunabeda_sanctuary": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Steep_cliffs_are_a_common_sight_in_Sunabeda_wildlife_Sanctuary.jpg/960px-Steep_cliffs_are_a_common_sight_in_Sunabeda_wildlife_Sanctuary.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Sunabeda_Wildlife_Sanctuary",
+        "label": "Sunabeda Wildlife Sanctuary · Wikimedia / Wikipedia",
+        "subject": "Sunabeda Wildlife Sanctuary",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sunabeda_Wildlife_Sanctuary",
+        "summary": "Photo shows Sunabeda Wildlife Sanctuary. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "od_ghanteswari": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Ghanteswari_Temple_%2818%29.jpg/960px-Ghanteswari_Temple_%2818%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Ghanteswari_Temple",
+        "label": "Ghanteswari Temple · Wikimedia / Wikipedia",
+        "subject": "Ghanteswari Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Ghanteswari_Temple",
+        "summary": "Photo shows Ghanteswari Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_jaipur": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg/960px-20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Amber_Fort",
+        "label": "Amber Fort · Wikimedia / Wikipedia",
+        "subject": "Amber Fort",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Amber_Fort",
+        "summary": "Photo shows Amber Fort. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_jaisalmer": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Jaisalmer_forteresse.jpg/960px-Jaisalmer_forteresse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Jaisalmer_Fort",
+        "label": "Jaisalmer Fort · Wikimedia / Wikipedia",
+        "subject": "Jaisalmer Fort",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Jaisalmer_Fort",
+        "summary": "Photo shows Jaisalmer Fort. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_udaipur": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Udaipur_Lake_India.JPG/960px-Udaipur_Lake_India.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Lake_Pichola",
+        "label": "Lake Pichola · Wikimedia / Wikipedia",
+        "subject": "Lake Pichola",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Lake_Pichola",
+        "summary": "Photo shows Lake Pichola. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_rann_of_kutch": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Gujarat_Gulfs.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Great_Rann_of_Kutch",
+        "label": "Great Rann of Kutch · Wikimedia / Wikipedia",
+        "subject": "Great Rann of Kutch",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Great_Rann_of_Kutch",
+        "summary": "Photo shows Great Rann of Kutch. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_gir": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/Gir_lion-Gir_forest%2Cjunagadh%2Cgujarat%2Cindia.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Gir_National_Park",
+        "label": "Gir National Park · Wikimedia / Wikipedia",
+        "subject": "Gir National Park",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Gir_National_Park",
+        "summary": "Photo shows Gir National Park. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_ajanta_ellora": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Ajanta_%2863%29.jpg/960px-Ajanta_%2863%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Ajanta_Caves",
+        "label": "Ajanta Caves · Wikimedia / Wikipedia",
+        "subject": "Ajanta Caves",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Ajanta_Caves",
+        "summary": "Photo shows Ajanta Caves. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_khajuraho": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/1_Khajuraho.jpg/960px-1_Khajuraho.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments",
+        "label": "Khajuraho Group of Monuments · Wikimedia / Wikipedia",
+        "subject": "Khajuraho Group of Monuments",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments",
+        "summary": "Photo shows Khajuraho Group of Monuments. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_bandhavgarh": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Tigress_in_Bandhavgarh_NP.jpg/960px-Tigress_in_Bandhavgarh_NP.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Bandhavgarh_National_Park",
+        "label": "Bandhavgarh National Park · Wikimedia / Wikipedia",
+        "subject": "Bandhavgarh National Park",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Bandhavgarh_National_Park",
+        "summary": "Photo shows Bandhavgarh National Park. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_chitrakote": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Chitrakot_waterfalls.JPG/960px-Chitrakot_waterfalls.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Chitrakote_Falls",
+        "label": "Chitrakote Falls · Wikimedia / Wikipedia",
+        "subject": "Chitrakote Falls",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Chitrakote_Falls",
+        "summary": "Photo shows Chitrakote Falls. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_coorg": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Abbey_Falls_New.jpg/960px-Abbey_Falls_New.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Abbey_Falls",
+        "label": "Abbey Falls · Wikimedia / Wikipedia",
+        "subject": "Abbey Falls",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Abbey_Falls",
+        "summary": "Photo shows Abbey Falls. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_gokarna": {
+      "photo": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Delight_india.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+        "source": "https://en.wikipedia.org/wiki/Gokarna%2C_Karnataka",
+        "label": "Gokarna, Karnataka · Wikimedia / Wikipedia",
+        "subject": "Gokarna, Karnataka",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Gokarna%2C_Karnataka",
+        "summary": "Photo shows Gokarna, Karnataka. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_munnar": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Munnar_Overview.jpg/960px-Munnar_Overview.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Munnar",
+        "label": "Munnar · Wikimedia / Wikipedia",
+        "subject": "Munnar",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Munnar",
+        "summary": "Photo shows Munnar. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_alleppey": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Alappuzha_Boat_Beauty_W.jpg/960px-Alappuzha_Boat_Beauty_W.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Alappuzha",
+        "label": "Alappuzha · Wikimedia / Wikipedia",
+        "subject": "Alappuzha",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Alappuzha",
+        "summary": "Photo shows Alappuzha. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_varkala": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Varkala_beach_from_above.jpg/960px-Varkala_beach_from_above.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Varkala_Beach",
+        "label": "Varkala Beach · Wikimedia / Wikipedia",
+        "subject": "Varkala Beach",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Varkala_Beach",
+        "summary": "Photo shows Varkala Beach. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_thanjavur": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg/960px-Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Brihadisvara_Temple",
+        "label": "Brihadisvara Temple · Wikimedia / Wikipedia",
+        "subject": "Brihadisvara Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Brihadisvara_Temple",
+        "summary": "Photo shows Brihadisvara Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_mahabalipuram": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Shore_Temple_-Mamallapuram_-Tamil_Nadu_-N-TN-C55.jpg/960px-Shore_Temple_-Mamallapuram_-Tamil_Nadu_-N-TN-C55.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Shore_Temple",
+        "label": "Shore Temple · Wikimedia / Wikipedia",
+        "subject": "Shore Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Shore_Temple",
+        "summary": "Photo shows Shore Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_palolem": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Palolem_Beach%2C_South_Goa.jpg/960px-Palolem_Beach%2C_South_Goa.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Palolem_Beach",
+        "label": "Palolem Beach · Wikimedia / Wikipedia",
+        "subject": "Palolem Beach",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Palolem_Beach",
+        "summary": "Photo shows Palolem Beach. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_dudhsagar": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Doodhsagar_Fall.jpg/960px-Doodhsagar_Fall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Dudhsagar_Falls",
+        "label": "Dudhsagar Falls · Wikimedia / Wikipedia",
+        "subject": "Dudhsagar Falls",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Dudhsagar_Falls",
+        "summary": "Photo shows Dudhsagar Falls. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_andaman": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Radha_Nagar_beach%2C_Havelock_Island%2C_Andamn%2C_India-_Sun_set_view.jpg/960px-Radha_Nagar_beach%2C_Havelock_Island%2C_Andamn%2C_India-_Sun_set_view.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Radhanagar_Beach",
+        "label": "Radhanagar Beach · Wikimedia / Wikipedia",
+        "subject": "Radhanagar Beach",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Radhanagar_Beach",
+        "summary": "Photo shows Radhanagar Beach. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_puducherry": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Pondicherry-Rock_beach_aerial_view.jpg/960px-Pondicherry-Rock_beach_aerial_view.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Pondicherry",
+        "label": "Pondicherry · Wikimedia / Wikipedia",
+        "subject": "Pondicherry",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Pondicherry",
+        "summary": "Photo shows Pondicherry. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_gandikota": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Indian_Grand_Canyon_Sudhakar_Bichali.jpg/960px-Indian_Grand_Canyon_Sudhakar_Bichali.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Gandikota",
+        "label": "Gandikota · Wikimedia / Wikipedia",
+        "subject": "Gandikota",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Gandikota",
+        "summary": "Photo shows Gandikota. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "dest_bodh_gaya": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Mahabodhitemple.jpg/960px-Mahabodhitemple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Mahabodhi_Temple",
+        "label": "Mahabodhi Temple · Wikimedia / Wikipedia",
+        "subject": "Mahabodhi Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Mahabodhi_Temple",
+        "summary": "Photo shows Mahabodhi Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "centre-balasore-remuna": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Khirachora_Gopinatha_Temple.jpg/960px-Khirachora_Gopinatha_Temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Khirachora_Gopinatha_Temple",
+        "label": "Khirachora Gopinatha Temple · Wikimedia / Wikipedia",
+        "subject": "Khirachora Gopinatha Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Khirachora_Gopinatha_Temple",
+        "summary": "Photo shows Khirachora Gopinatha Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "centre-ganjam-buguda": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Baladev_Temple_Buguda.jpg/960px-Baladev_Temple_Buguda.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Buguda",
+        "label": "Buguda · Wikimedia / Wikipedia",
+        "subject": "Buguda",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Buguda",
+        "summary": "Photo shows Buguda. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "centre-jajpur-chandikhol": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Maha_Binayak_Temple.jpg/960px-Maha_Binayak_Temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Chandikhole",
+        "label": "Chandikhole · Wikimedia / Wikipedia",
+        "subject": "Chandikhole",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Chandikhole",
+        "summary": "Photo shows Chandikhole. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
+    },
+    "centre-jajpur-mahavinayak": {
+      "photo": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Mahabinayak_temple.jpg/960px-Mahabinayak_temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+        "source": "https://en.wikipedia.org/wiki/Mahavinayak_Temple",
+        "label": "Mahavinayak Temple · Wikimedia / Wikipedia",
+        "subject": "Mahavinayak Temple",
+        "rights": "Consult the source-page image for creator and licence."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Mahavinayak_Temple",
+        "summary": "Photo shows Mahavinayak Temple. A combined itinerary may include other nearby stops.",
+        "checkedAt": "2026-10-11"
+      }
     }
   }
 };

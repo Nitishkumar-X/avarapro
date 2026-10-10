@@ -1,0 +1,236 @@
+[
+  {
+    "id": "od_bhattarika",
+    "name": "Bhattarika Temple & Mahanadi Gorge",
+    "subject": "Bhattarika Temple",
+    "source": "https://en.wikipedia.org/wiki/Bhattarika_Temple"
+  },
+  {
+    "id": "od_barehipani",
+    "name": "Barehipani & Joranda Waterfalls",
+    "subject": "Barehipani Falls",
+    "source": "https://en.wikipedia.org/wiki/Barehipani_Falls"
+  },
+  {
+    "id": "od_sanaghagara",
+    "name": "Sanaghagara & Badaghagara Waterfalls",
+    "subject": "Sanaghagara Waterfall",
+    "source": "https://en.wikipedia.org/wiki/Sanaghagara_Waterfall"
+  },
+  {
+    "id": "od_khandadhar_sng",
+    "name": "Khandadhar Waterfall (Sundargarh)",
+    "subject": "Khandadhar Falls (Sundargarh)",
+    "source": "https://en.wikipedia.org/wiki/Khandadhar_Falls_(Sundargarh)"
+  },
+  {
+    "id": "od_mandira_dam",
+    "name": "Mandira Dam & Reservoir",
+    "subject": "Mandira Dam",
+    "source": "https://en.wikipedia.org/wiki/Mandira_Dam"
+  },
+  {
+    "id": "od_akhandalamani",
+    "name": "Baba Akhandalamani Temple (Aradi)",
+    "subject": "Akhandalamani Temple",
+    "source": "https://en.wikipedia.org/wiki/Akhandalamani_Temple"
+  },
+  {
+    "id": "od_sarala_temple",
+    "name": "Maa Sarala Peetha (Jhankad)",
+    "subject": "Sarala Temple",
+    "source": "https://en.wikipedia.org/wiki/Sarala_Temple"
+  },
+  {
+    "id": "od_chatikona",
+    "name": "Chatikona Waterfalls & Niyamgiri Foothills",
+    "subject": "Chatikona",
+    "source": "https://en.wikipedia.org/wiki/Chatikona"
+  },
+  {
+    "id": "od_karlapat",
+    "name": "Karlapat Wildlife Sanctuary & Jakham",
+    "subject": "Karlapat Wildlife Sanctuary",
+    "source": "https://en.wikipedia.org/wiki/Karlapat_Wildlife_Sanctuary"
+  },
+  {
+    "id": "od_subarnameru",
+    "name": "Subarnameru Temple & Silk Weavers Village",
+    "subject": "Subarnameru Temple",
+    "source": "https://en.wikipedia.org/wiki/Subarnameru_Temple"
+  },
+  {
+    "id": "od_koili_ghoghar",
+    "name": "Koili Ghoghar Waterfall & Cave Temple",
+    "subject": "Koilighugar Waterfall",
+    "source": "https://en.wikipedia.org/wiki/Koilighugar_Waterfall"
+  },
+  {
+    "id": "od_sunabeda_sanctuary",
+    "name": "Sunabeda Wildlife Sanctuary & Canyon",
+    "subject": "Sunabeda Wildlife Sanctuary",
+    "source": "https://en.wikipedia.org/wiki/Sunabeda_Wildlife_Sanctuary"
+  },
+  {
+    "id": "od_ghanteswari",
+    "name": "Maa Ghanteswari Temple (The Bell Temple)",
+    "subject": "Ghanteswari Temple",
+    "source": "https://en.wikipedia.org/wiki/Ghanteswari_Temple"
+  },
+  {
+    "id": "dest_jaipur",
+    "name": "Jaipur Pink City & Amer Fort",
+    "subject": "Amber Fort",
+    "source": "https://en.wikipedia.org/wiki/Amber_Fort"
+  },
+  {
+    "id": "dest_jaisalmer",
+    "name": "Jaisalmer Golden Fort & Thar Dunes",
+    "subject": "Jaisalmer Fort",
+    "source": "https://en.wikipedia.org/wiki/Jaisalmer_Fort"
+  },
+  {
+    "id": "dest_udaipur",
+    "name": "Udaipur City of Lakes & Lake Pichola",
+    "subject": "Lake Pichola",
+    "source": "https://en.wikipedia.org/wiki/Lake_Pichola"
+  },
+  {
+    "id": "dest_rann_of_kutch",
+    "name": "Rann of Kutch & White Salt Desert",
+    "subject": "Great Rann of Kutch",
+    "source": "https://en.wikipedia.org/wiki/Great_Rann_of_Kutch"
+  },
+  {
+    "id": "dest_gir",
+    "name": "Gir National Park (Asiatic Lions)",
+    "subject": "Gir National Park",
+    "source": "https://en.wikipedia.org/wiki/Gir_National_Park"
+  },
+  {
+    "id": "dest_ajanta_ellora",
+    "name": "Ajanta & Ellora Rock-Cut Caves",
+    "subject": "Ajanta Caves",
+    "source": "https://en.wikipedia.org/wiki/Ajanta_Caves"
+  },
+  {
+    "id": "dest_khajuraho",
+    "name": "Khajuraho Monument Complex",
+    "subject": "Khajuraho Group of Monuments",
+    "source": "https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments"
+  },
+  {
+    "id": "dest_bandhavgarh",
+    "name": "Bandhavgarh & Kanha Tiger Reserves",
+    "subject": "Bandhavgarh National Park",
+    "source": "https://en.wikipedia.org/wiki/Bandhavgarh_National_Park"
+  },
+  {
+    "id": "dest_chitrakote",
+    "name": "Chitrakote Falls (Niagara of India)",
+    "subject": "Chitrakote Falls",
+    "source": "https://en.wikipedia.org/wiki/Chitrakote_Falls"
+  },
+  {
+    "id": "dest_coorg",
+    "name": "Coorg Coffee Highlands & Abbey Falls",
+    "subject": "Abbey Falls",
+    "source": "https://en.wikipedia.org/wiki/Abbey_Falls"
+  },
+  {
+    "id": "dest_gokarna",
+    "name": "Gokarna Om Beach & Kudle Bay",
+    "subject": "Gokarna, Karnataka",
+    "source": "https://en.wikipedia.org/wiki/Gokarna%2C_Karnataka"
+  },
+  {
+    "id": "dest_munnar",
+    "name": "Munnar Tea Hills & Eravikulam",
+    "subject": "Munnar",
+    "source": "https://en.wikipedia.org/wiki/Munnar"
+  },
+  {
+    "id": "dest_alleppey",
+    "name": "Alleppey Houseboat Backwaters",
+    "subject": "Alappuzha",
+    "source": "https://en.wikipedia.org/wiki/Alappuzha"
+  },
+  {
+    "id": "dest_varkala",
+    "name": "Varkala Red Cliff & Papanasam Beach",
+    "subject": "Varkala Beach",
+    "source": "https://en.wikipedia.org/wiki/Varkala_Beach"
+  },
+  {
+    "id": "dest_thanjavur",
+    "name": "Thanjavur Brihadisvara (Great Living Chola)",
+    "subject": "Brihadisvara Temple",
+    "source": "https://en.wikipedia.org/wiki/Brihadisvara_Temple"
+  },
+  {
+    "id": "dest_mahabalipuram",
+    "name": "Mahabalipuram Shore Temples",
+    "subject": "Shore Temple",
+    "source": "https://en.wikipedia.org/wiki/Shore_Temple"
+  },
+  {
+    "id": "dest_palolem",
+    "name": "Palolem Beach & South Goa Coast",
+    "subject": "Palolem Beach",
+    "source": "https://en.wikipedia.org/wiki/Palolem_Beach"
+  },
+  {
+    "id": "dest_dudhsagar",
+    "name": "Dudhsagar Falls & Bhagwan Mahaveer",
+    "subject": "Dudhsagar Falls",
+    "source": "https://en.wikipedia.org/wiki/Dudhsagar_Falls"
+  },
+  {
+    "id": "dest_andaman",
+    "name": "Havelock Island Radhanagar Beach",
+    "subject": "Radhanagar Beach",
+    "source": "https://en.wikipedia.org/wiki/Radhanagar_Beach"
+  },
+  {
+    "id": "dest_puducherry",
+    "name": "Puducherry French Colony & Auroville",
+    "subject": "Pondicherry",
+    "source": "https://en.wikipedia.org/wiki/Pondicherry"
+  },
+  {
+    "id": "dest_gandikota",
+    "name": "Gandikota Grand Canyon & Fort",
+    "subject": "Gandikota",
+    "source": "https://en.wikipedia.org/wiki/Gandikota"
+  },
+  {
+    "id": "dest_bodh_gaya",
+    "name": "Bodh Gaya Mahabodhi Temple",
+    "subject": "Mahabodhi Temple",
+    "source": "https://en.wikipedia.org/wiki/Mahabodhi_Temple"
+  },
+  {
+    "id": "centre-balasore-remuna",
+    "name": "Remuna",
+    "subject": "Khirachora Gopinatha Temple",
+    "source": "https://en.wikipedia.org/wiki/Khirachora_Gopinatha_Temple"
+  },
+  {
+    "id": "centre-ganjam-buguda",
+    "name": "Buguda",
+    "subject": "Buguda",
+    "source": "https://en.wikipedia.org/wiki/Buguda"
+  },
+  {
+    "id": "centre-jajpur-chandikhol",
+    "name": "Chandikhol",
+    "subject": "Chandikhole",
+    "source": "https://en.wikipedia.org/wiki/Chandikhole"
+  },
+  {
+    "id": "centre-jajpur-mahavinayak",
+    "name": "Mahavinayak",
+    "subject": "Mahavinayak Temple",
+    "source": "https://en.wikipedia.org/wiki/Mahavinayak_Temple"
+  }
+]

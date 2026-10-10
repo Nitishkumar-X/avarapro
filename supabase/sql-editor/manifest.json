@@ -8,118 +8,123 @@
     },
     {
       "name": "02-seed.sql",
-      "bytes": 49017,
-      "statements": 81
+      "bytes": 48405,
+      "statements": 83
     },
     {
       "name": "03-seed.sql",
-      "bytes": 49040,
-      "statements": 68
+      "bytes": 48350,
+      "statements": 77
     },
     {
       "name": "04-seed.sql",
-      "bytes": 48229,
+      "bytes": 48847,
       "statements": 79
     },
     {
       "name": "05-seed.sql",
-      "bytes": 48978,
-      "statements": 73
+      "bytes": 48656,
+      "statements": 91
     },
     {
       "name": "06-seed.sql",
-      "bytes": 48903,
-      "statements": 93
+      "bytes": 48865,
+      "statements": 92
     },
     {
       "name": "07-seed.sql",
-      "bytes": 49102,
-      "statements": 96
+      "bytes": 48886,
+      "statements": 94
     },
     {
       "name": "08-seed.sql",
-      "bytes": 49039,
-      "statements": 84
+      "bytes": 48790,
+      "statements": 95
     },
     {
       "name": "09-seed.sql",
-      "bytes": 48681,
-      "statements": 80
+      "bytes": 48959,
+      "statements": 82
     },
     {
       "name": "10-seed.sql",
-      "bytes": 49052,
+      "bytes": 48618,
       "statements": 79
     },
     {
       "name": "11-seed.sql",
-      "bytes": 48601,
-      "statements": 80
+      "bytes": 48926,
+      "statements": 79
     },
     {
       "name": "12-seed.sql",
-      "bytes": 48751,
+      "bytes": 48839,
       "statements": 80
     },
     {
       "name": "13-seed.sql",
-      "bytes": 48804,
+      "bytes": 48832,
       "statements": 80
     },
     {
       "name": "14-seed.sql",
-      "bytes": 48947,
+      "bytes": 48501,
       "statements": 80
     },
     {
       "name": "15-seed.sql",
-      "bytes": 48574,
+      "bytes": 48876,
       "statements": 80
     },
     {
       "name": "16-seed.sql",
-      "bytes": 48818,
-      "statements": 89
+      "bytes": 48904,
+      "statements": 80
     },
     {
       "name": "17-seed.sql",
-      "bytes": 48862,
-      "statements": 92
+      "bytes": 48598,
+      "statements": 91
     },
     {
       "name": "18-seed.sql",
-      "bytes": 48966,
-      "statements": 95
+      "bytes": 48595,
+      "statements": 92
     },
     {
       "name": "19-seed.sql",
-      "bytes": 49076,
-      "statements": 92
-    },
-    {
-      "name": "20-seed.sql",
-      "bytes": 48288,
-      "statements": 92
-    },
-    {
-      "name": "21-seed.sql",
-      "bytes": 48872,
-      "statements": 95
-    },
-    {
-      "name": "22-seed.sql",
-      "bytes": 49106,
-      "statements": 94
-    },
-    {
-      "name": "23-seed.sql",
-      "bytes": 48989,
+      "bytes": 48577,
       "statements": 93
     },
     {
-      "name": "24-seed.sql",
-      "bytes": 48738,
+      "name": "20-seed.sql",
+      "bytes": 48682,
+      "statements": 91
+    },
+    {
+      "name": "21-seed.sql",
+      "bytes": 49056,
       "statements": 94
+    },
+    {
+      "name": "22-seed.sql",
+      "bytes": 48625,
+      "statements": 96
+    },
+    {
+      "name": "23-seed.sql",
+      "bytes": 49050,
+      "statements": 92
+    },
+    {
+      "name": "24-seed.sql",
+      "bytes": 49031,
+      "statements": 93
+    },
+    {
+      "name": "25-seed.sql",
+      "bytes": 43783,
+      "statements": 85
     }
   ]
 }

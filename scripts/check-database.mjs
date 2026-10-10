@@ -3,6 +3,12 @@ import fs from 'node:fs';import assert from 'node:assert/strict';
 const db=new PGlite(),A='11111111-1111-4111-8111-111111111111',B='22222222-2222-4222-8222-222222222222';
 await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth,public to anon,authenticated,service_role;grant execute on function auth.uid() to anon,authenticated;insert into auth.users values('${A}'),('${B}');`);
 await db.exec(fs.readFileSync('supabase/migrations/202610110001_avara.sql','utf8'));
+if(process.argv.includes('--photo-update')){
+ const updates=fs.readdirSync('supabase/photo-update').filter(name=>name.endsWith('.sql')).sort();
+ for(let pass=0;pass<2;pass++)for(const name of updates){const content=fs.readFileSync('supabase/photo-update/'+name,'utf8');assert.ok(Buffer.byteLength(content)<48*1024);await db.exec(content)}
+ assert.equal(Number((await db.query('select count(*) as n from avara_photos')).rows[0].n),39);
+ console.log('Independent photo update applied twice with all foreign keys satisfied');
+}
 const chunked=process.argv.includes('--sql-editor');
 let seedFiles=['supabase/seed.sql'];
 if(chunked){
@@ -18,7 +24,7 @@ if(chunked){
  assert.equal(statements,full,'Chunked seed must preserve every statement in order');
 }
 for(let pass=0;pass<2;pass++)for(const path of seedFiles)await db.exec(fs.readFileSync(path,'utf8'));
-assert.equal(Number((await db.query('select count(*) as n from avara_photos where is_cover')).rows[0].n),367);
+assert.equal(Number((await db.query('select count(*) as n from avara_photos where is_cover')).rows[0].n),406);
 console.log('Validated '+(chunked?seedFiles.length+' SQL Editor batches':'full seed')+' twice');
 const dest=(await db.query('select id from avara_destinations limit 1')).rows[0].id;
 const dest2=(await db.query('select id from avara_destinations offset 1 limit 1')).rows[0].id;
