@@ -15,3 +15,7 @@ yarn-error.log*
 
 # Local scratches if temporary
 # scratch/*.tmp
+
+# Generated deployment archive and separate Sites source checkout
+avara-pro.tar.gz
+avara-site/

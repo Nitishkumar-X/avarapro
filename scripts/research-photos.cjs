@@ -1,0 +1,3 @@
+// Read-only source discovery. No image files are copied from third-party sites.
+const urls=['https://odishatourism.gov.in/en/places/deomali-hills','https://odishatourism.gov.in/en/east-odisha','https://www.ecotourodisha.com/destination/similipal-nature-camps','https://odishatourism.gov.in/content/tourism/en/discover/attractions/forest-wildlife/bhitarkanika.html'];
+Promise.allSettled(urls.map(async url=>{const r=await fetch(url);const html=await r.text();return {url,status:r.status,images:(html.match(/<img[^>]+>/g)||[]).filter(s=>/banner|chilika|bhitarkanika|deomali|similipal|mangalajodi/i.test(s)).slice(0,10)}})).then(r=>r.forEach(x=>console.log(JSON.stringify(x))));
