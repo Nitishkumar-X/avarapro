@@ -1,0 +1,909 @@
+/* ==========================================================================
+   NATUREX · ANTARA — Next-Gen Redesign Styling (v4.0)
+   Spatial 3D Horizon Deck · Apple Vision UI · Dark Cinematic Adventure ·
+   Organic Eco-Luxury · Trail Elevation Graph · Polaroid Scrapbook ·
+   Custom Magnetic Cursor & Interactive Quiz
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* 0. CUSTOM CURSOR & SMOOTH SCROLL                                   */
+/* ------------------------------------------------------------------ */
+@media (pointer: fine) {
+  body.has-custom-cursor {
+    cursor: default;
+  }
+  .nx-cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 8px; height: 8px;
+    background: #02C39A;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear, opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+    mix-blend-mode: difference;
+  }
+  .nx-cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 38px; height: 38px;
+    border: 1.5px solid rgba(2, 195, 154, 0.55);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.12s cubic-bezier(0.18, 0.89, 0.32, 1.28), width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+  }
+  .nx-cursor-ring.hovering {
+    width: 64px; height: 64px;
+    border-color: #F59E0B;
+    background: rgba(245, 158, 11, 0.08);
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 1. SPATIAL HORIZON STAGE (Apple Vision Pro & Dark Immersion)       */
+/* ------------------------------------------------------------------ */
+.spatial-hero-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #07100B;
+  color: #FFFFFF;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+/* Ambient Backdrops */
+.spatial-ambient-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+  filter: blur(12px) brightness(0.65) saturate(1.25);
+  transform: scale(1.1);
+  transition: opacity 0.8s ease, filter 0.8s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.spatial-ambient-glow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(2, 195, 154, 0.18) 0%, rgba(245, 158, 11, 0.08) 50%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+.spatial-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(7, 16, 11, 0.85) 85%, #07100B 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. TOP FLOATING CONTROLS & THEME MODE SWITCHER                     */
+/* ------------------------------------------------------------------ */
+.spatial-top-bar {
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 24px auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Theme Switcher Pills (Spatial / Cinematic / Eco-Luxury) */
+.nx-theme-pills {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.nx-theme-pill-btn {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.nx-theme-pill-btn:hover {
+  color: #FFFFFF;
+}
+.nx-theme-pill-btn.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+.nx-theme-pill-btn.active.mode-cinematic {
+  background: #F59E0B;
+  color: #07100B;
+}
+.nx-theme-pill-btn.active.mode-organic {
+  background: #2D5A3D;
+  color: #FFFFFF;
+}
+
+/* Top Search Capsule */
+.spatial-search-capsule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  padding: 8px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.spatial-search-capsule:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. 3D CAROUSEL PERSPECTIVE STAGE                                   */
+/* ------------------------------------------------------------------ */
+.spatial-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 520px;
+  margin: 0 auto;
+  perspective: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  user-select: none;
+}
+
+.spatial-deck {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Single 3D Card */
+.spatial-card {
+  position: absolute;
+  width: 340px;
+  height: 480px;
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s ease, filter 0.5s ease, box-shadow 0.6s ease;
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
+}
+
+@media (min-width: 768px) {
+  .spatial-card {
+    width: 380px;
+    height: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .spatial-card {
+    width: 420px;
+    height: 520px;
+  }
+}
+
+/* 3D Positions */
+.spatial-card.pos-0 {
+  transform: translateX(0) translateZ(100px) rotateY(0deg) scale(1.04);
+  z-index: 20;
+  opacity: 1;
+  filter: none;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.32), 0 0 45px rgba(2, 195, 154, 0.22);
+}
+.spatial-card.pos-1 {
+  transform: translateX(290px) translateZ(-40px) rotateY(-24deg) scale(0.90);
+  z-index: 15;
+  opacity: 0.88;
+  filter: brightness(0.85);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+.spatial-card.pos--1 {
+  transform: translateX(-290px) translateZ(-40px) rotateY(24deg) scale(0.90);
+  z-index: 15;
+  opacity: 0.88;
+  filter: brightness(0.85);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+.spatial-card.pos-2 {
+  transform: translateX(540px) translateZ(-160px) rotateY(-38deg) scale(0.78);
+  z-index: 10;
+  opacity: 0.65;
+  filter: brightness(0.65) blur(1px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.spatial-card.pos--2 {
+  transform: translateX(-540px) translateZ(-160px) rotateY(38deg) scale(0.78);
+  z-index: 10;
+  opacity: 0.65;
+  filter: brightness(0.65) blur(1px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.spatial-card.pos-hidden {
+  transform: translateZ(-350px) scale(0.6);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Card Internal Elements */
+.spatial-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #111D15;
+  border-radius: 28px;
+  overflow: hidden;
+}
+.spatial-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.spatial-card.pos-0:hover .spatial-card-img {
+  transform: scale(1.04);
+}
+.spatial-card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 16, 11, 0.15) 0%, rgba(7, 16, 11, 0.4) 40%, rgba(7, 16, 11, 0.95) 100%);
+  transition: opacity 0.3s ease;
+}
+
+/* Top Floating Glass Badges */
+.spatial-card-top {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+.spatial-pill-tag {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+.spatial-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.spatial-glass-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.spatial-glass-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+.spatial-glass-icon-btn.liked {
+  color: #EF4444;
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.spatial-glass-icon-btn.saved {
+  color: #F59E0B;
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+/* Card Bottom Content */
+.spatial-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 5;
+  background: linear-gradient(180deg, transparent 0%, rgba(7, 16, 11, 0.92) 25%, #07100B 100%);
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+.spatial-coords-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #02C39A;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.spatial-card-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+.spatial-card-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.spatial-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.spatial-meta-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.spatial-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.spatial-expand-btn:hover {
+  background: #02C39A;
+  color: #07100B;
+  border-color: #02C39A;
+  box-shadow: 0 4px 15px rgba(2, 195, 154, 0.4);
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. FLOATING VISION MEDIA PILL CONTROLLER (Bottom Dock)             */
+/* ------------------------------------------------------------------ */
+.spatial-bottom-dock {
+  position: relative;
+  z-index: 15;
+  margin: 32px auto 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  padding: 8px 16px 8px 10px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.spatial-dock-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+.spatial-dock-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.spatial-dock-info {
+  display: flex;
+  flex-direction: column;
+}
+.spatial-dock-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+.spatial-dock-sub {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+.spatial-dock-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+.spatial-dock-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.spatial-dock-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+.spatial-dock-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0 4px;
+}
+
+/* ------------------------------------------------------------------ */
+/* 5. CINEMATIC ADVENTURE THEME (Template 4: Dark Immersion)          */
+/* ------------------------------------------------------------------ */
+.theme-mode-cinematic .spatial-hero-wrapper {
+  background: #0A0D0B;
+}
+.theme-mode-cinematic .spatial-card.pos-0 {
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.85), 0 0 0 2px #F59E0B, 0 0 50px rgba(245, 158, 11, 0.35);
+}
+.theme-mode-cinematic .spatial-expand-btn {
+  background: #F59E0B;
+  color: #07100B;
+  border-color: #F59E0B;
+  font-weight: 700;
+}
+.theme-mode-cinematic .spatial-coords-label {
+  color: #F59E0B;
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. ORGANIC ECO-LUXURY THEME (Template 3: Sustainable Luxury)       */
+/* ------------------------------------------------------------------ */
+.theme-mode-organic .spatial-hero-wrapper {
+  background: #F4F1EA;
+  color: #1B2B20;
+}
+.theme-mode-organic .spatial-ambient-glow {
+  background: radial-gradient(circle, rgba(45, 90, 61, 0.15) 0%, rgba(200, 160, 80, 0.1) 50%, transparent 75%);
+}
+.theme-mode-organic .spatial-vignette {
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(244, 241, 234, 0.85) 90%, #F4F1EA 100%);
+}
+.theme-mode-organic .spatial-card.pos-0 {
+  box-shadow: 0 35px 75px rgba(27, 43, 32, 0.25), 0 0 0 1px rgba(27, 43, 32, 0.18);
+}
+.theme-mode-organic .spatial-card-inner {
+  border-radius: 40px 16px 40px 16px;
+}
+.theme-mode-organic .spatial-card-body {
+  background: linear-gradient(180deg, transparent 0%, rgba(27, 43, 32, 0.95) 30%, #152219 100%);
+}
+.theme-mode-organic .spatial-bottom-dock {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(27, 43, 32, 0.15);
+  box-shadow: 0 15px 40px rgba(27, 43, 32, 0.15);
+}
+.theme-mode-organic .spatial-dock-title {
+  color: #1B2B20;
+}
+.theme-mode-organic .spatial-dock-sub {
+  color: #4A6B53;
+}
+.theme-mode-organic .spatial-dock-btn {
+  background: rgba(27, 43, 32, 0.08);
+  border-color: rgba(27, 43, 32, 0.15);
+  color: #1B2B20;
+}
+.theme-mode-organic .spatial-dock-counter {
+  color: #1B2B20;
+}
+
+/* ------------------------------------------------------------------ */
+/* 7. INTERACTIVE EXPEDITION VIBE MATCHER QUIZ (Template 1 & 5)       */
+/* ------------------------------------------------------------------ */
+.nx-quiz-section {
+  position: relative;
+  max-width: 1200px;
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
+}
+.nx-quiz-banner {
+  background: linear-gradient(135deg, #13271D 0%, #0B1912 100%);
+  border: 1px solid rgba(2, 195, 154, 0.25);
+  border-radius: 32px;
+  padding: 40px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.nx-quiz-glow {
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(2, 195, 154, 0.25) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+.nx-quiz-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.nx-quiz-option-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.nx-quiz-option-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #02C39A;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(2, 195, 154, 0.15);
+}
+.nx-quiz-option-card.selected {
+  background: rgba(2, 195, 154, 0.15);
+  border-color: #02C39A;
+  box-shadow: 0 10px 30px rgba(2, 195, 154, 0.25);
+}
+
+/* Quiz Result Card */
+.nx-quiz-result-box {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(2, 195, 154, 0.35);
+  border-radius: 24px;
+  padding: 28px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInScale 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@media (min-width: 768px) {
+  .nx-quiz-result-box {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 8. EXPEDITION TRAIL ELEVATION PROFILE & MAP (Template 5)           */
+/* ------------------------------------------------------------------ */
+.nx-trail-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.nx-trail-card {
+  background: var(--bg-surface, #FFFFFF);
+  border: 1px solid var(--border-medium, rgba(0,0,0,0.1));
+  border-radius: 32px;
+  padding: 36px;
+  box-shadow: var(--shadow-lg, 0 20px 48px rgba(0,0,0,0.08));
+}
+.dark .nx-trail-card {
+  background: #111E16;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.nx-trail-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+.nx-trail-tab-btn {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border-medium, rgba(0,0,0,0.15));
+  background: transparent;
+  color: var(--text-secondary, #333);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.nx-trail-tab-btn.active {
+  background: #1B3B2B;
+  color: #FFFFFF;
+  border-color: #1B3B2B;
+}
+.dark .nx-trail-tab-btn.active {
+  background: #02C39A;
+  color: #07100B;
+  border-color: #02C39A;
+}
+
+/* Elevation Chart SVG */
+.nx-elevation-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: rgba(2, 195, 154, 0.04);
+  border-radius: 20px;
+  padding: 16px;
+  margin: 20px 0;
+  overflow: hidden;
+  border: 1px solid rgba(2, 195, 154, 0.15);
+}
+
+/* Waypoints Grid */
+.nx-waypoints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.nx-waypoint-item {
+  padding: 14px;
+  background: rgba(0,0,0,0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+.dark .nx-waypoint-item {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+}
+.nx-waypoint-item:hover {
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------ */
+/* 9. VERIFIED EXPEDITION GUIDE ROSTER (Template 5)                   */
+/* ------------------------------------------------------------------ */
+.nx-guides-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.nx-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+.nx-guide-card {
+  background: var(--bg-surface, #FFFFFF);
+  border: 1px solid var(--border-medium, rgba(0,0,0,0.1));
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+}
+.dark .nx-guide-card {
+  background: #111E16;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.nx-guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: #02C39A;
+}
+.nx-guide-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #02C39A;
+  box-shadow: 0 6px 20px rgba(2, 195, 154, 0.3);
+  margin-bottom: 14px;
+}
+.nx-guide-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(2, 195, 154, 0.15);
+  color: #02C39A;
+  margin-bottom: 8px;
+}
+
+/* ------------------------------------------------------------------ */
+/* 10. SUSTAINABLE LUXURY & ECO-METRICS (Template 3)                  */
+/* ------------------------------------------------------------------ */
+.nx-sustainability-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.nx-sustainability-box {
+  background: linear-gradient(135deg, #182C20 0%, #0F1C14 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 36px;
+  padding: 48px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.nx-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+.nx-stat-tile {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 24px;
+  backdrop-filter: blur(16px);
+  transition: transform 0.2s ease;
+}
+.nx-stat-tile:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.09);
+}
+.nx-stat-number {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #02C39A;
+  line-height: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* 11. POLAROID FIELD MEMORIES & SCRAPBOOK (Template 1)               */
+/* ------------------------------------------------------------------ */
+.nx-scrapbook-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.nx-polaroid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 32px;
+}
+.nx-polaroid-card {
+  background: #FFFFFF;
+  padding: 14px 14px 22px 14px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  cursor: pointer;
+  transform-origin: center;
+}
+.nx-polaroid-card:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+.nx-polaroid-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 24px;
+  background: rgba(245, 240, 225, 0.75);
+  backdrop-filter: blur(4px);
+  border: 1px dashed rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.nx-polaroid-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+.nx-polaroid-caption {
+  font-family: 'Sacramento', cursive;
+  font-size: 22px;
+  color: #1A1A1A;
+  line-height: 1.2;
+}
+.nx-polaroid-note {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 11px;
+  color: #666666;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}

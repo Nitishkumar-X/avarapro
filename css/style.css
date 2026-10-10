@@ -1,0 +1,2555 @@
+/* ==========================================================================
+   WAYFARER — Design System v2
+   Personal Travel OS · Odisha First
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sacramento&display=swap');
+
+/* ============================================================
+   1. DESIGN TOKENS (CSS Variables)
+   ============================================================ */
+:root {
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-script: 'Sacramento', cursive;
+
+  /* Light Theme — Warm Ivory */
+  --bg-primary:    #FAF8F5;
+  --bg-secondary:  #F5EFE3;
+  --bg-surface:    #FFFFFF;
+  --bg-glass:      rgba(255, 255, 255, 0.75);
+  --bg-glass-dark: rgba(255, 255, 255, 0.55);
+  --bg-overlay:    rgba(250, 248, 245, 0.92);
+
+  --text-primary:   #1B3B2B;
+  --text-secondary: #3A5A48;
+  --text-muted:     #7A9A8A;
+  --text-faint:     #A8BFB5;
+  --text-inverse:   #FFFFFF;
+
+  --border:         rgba(27, 59, 43, 0.10);
+  --border-medium:  rgba(27, 59, 43, 0.18);
+  --border-strong:  rgba(27, 59, 43, 0.30);
+
+  --accent-forest:  #1B3B2B;
+  --accent-sage:    #4A7C6F;
+  --accent-gold:    #C4941E;
+  --accent-amber:   #D97706;
+  --accent-terra:   #C1440E;
+  --accent-mist:    #9EBFB3;
+
+  --shadow-xs:  0 1px 3px rgba(27,59,43,0.06);
+  --shadow-sm:  0 2px 8px rgba(27,59,43,0.08);
+  --shadow-md:  0 8px 24px rgba(27,59,43,0.10);
+  --shadow-lg:  0 20px 48px rgba(27,59,43,0.14);
+  --shadow-xl:  0 32px 64px rgba(27,59,43,0.18);
+  --shadow-glass: 0 8px 32px rgba(27,59,43,0.08);
+
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-xl:  32px;
+  --radius-2xl: 40px;
+
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast:   0.15s;
+  --t-normal: 0.28s;
+  --t-slow:   0.55s;
+  --t-cinematic: 0.8s;
+}
+
+.dark {
+  --bg-primary:    #0C1A10;
+  --bg-secondary:  #111E16;
+  --bg-surface:    #1A2E1F;
+  --bg-glass:      rgba(11, 20, 14, 0.80);
+  --bg-glass-dark: rgba(11, 20, 14, 0.65);
+  --bg-overlay:    rgba(12, 26, 16, 0.94);
+
+  --text-primary:   #F0EBE0;
+  --text-secondary: #C5D5CC;
+  --text-muted:     #7A9A8A;
+  --text-faint:     #4A6A5A;
+  --text-inverse:   #0C1A10;
+
+  --border:         rgba(240, 235, 224, 0.08);
+  --border-medium:  rgba(240, 235, 224, 0.14);
+  --border-strong:  rgba(240, 235, 224, 0.24);
+
+  --shadow-xs:  0 1px 3px rgba(0,0,0,0.30);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.45);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.55);
+  --shadow-lg:  0 20px 48px rgba(0,0,0,0.65);
+  --shadow-xl:  0 32px 64px rgba(0,0,0,0.75);
+  --shadow-glass: 0 8px 32px rgba(0,0,0,0.40);
+}
+
+/* ============================================================
+   2. BASE RESET & BODY
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color var(--t-normal) var(--ease-smooth),
+              color var(--t-normal) var(--ease-smooth);
+}
+
+.wf-body { background-color: var(--bg-primary); }
+
+/* ============================================================
+   3. SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+.hide-scroll { scrollbar-width: none; }
+.hide-scroll::-webkit-scrollbar { display: none; }
+
+/* ============================================================
+   4. GLASS SURFACES — used for nav, controls, overlays
+   ============================================================ */
+.wf-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.wf-glass-dark {
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+}
+
+/* ============================================================
+   5. SURFACE CLASSES
+   ============================================================ */
+.wf-surface {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+}
+
+.wf-bg-primary   { background-color: var(--bg-primary); }
+.wf-bg-secondary { background-color: var(--bg-secondary); }
+.wf-border       { border-color: var(--border); }
+.wf-border-med   { border-color: var(--border-medium); }
+
+/* ============================================================
+   6. TYPOGRAPHY UTILITIES
+   ============================================================ */
+.wf-text-primary   { color: var(--text-primary); }
+.wf-text-secondary { color: var(--text-secondary); }
+.wf-text-muted     { color: var(--text-muted); }
+.wf-text-faint     { color: var(--text-faint); }
+.wf-text-inverse   { color: var(--text-inverse); }
+.wf-text-gold      { color: var(--accent-gold); }
+.wf-text-sage      { color: var(--accent-sage); }
+.wf-text-terra     { color: var(--accent-terra); }
+
+.font-serif  { font-family: var(--font-serif); }
+.font-script { font-family: var(--font-script); }
+
+/* Editorial heading scale */
+.wf-display  { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; }
+.wf-headline { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 400; line-height: 1.15; }
+.wf-title    { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 500; line-height: 1.25; }
+.wf-label    { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+.wf-caption  { font-family: var(--font-sans); font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Gradient text */
+.wf-gradient-forest {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-sage) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.dark .wf-gradient-forest {
+  background: linear-gradient(135deg, var(--accent-mist) 0%, var(--text-primary) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.wf-gradient-gold {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-amber) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* ============================================================
+   7. NAVIGATION
+   ============================================================ */
+.wf-nav-btn {
+  padding: 7px 16px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-smooth);
+  white-space: nowrap;
+}
+.wf-nav-btn:hover {
+  color: var(--text-primary);
+  background: var(--border);
+}
+.wf-nav-btn.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+.dark .wf-nav-btn.active {
+  background: var(--accent-mist);
+  color: var(--bg-primary);
+}
+
+/* Mobile nav buttons */
+.wf-mob-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-smooth);
+  min-width: 52px;
+}
+.wf-mob-btn:hover { color: var(--text-secondary); }
+.wf-mob-btn.active {
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+.dark .wf-mob-btn.active {
+  color: var(--accent-mist);
+  background: rgba(158, 191, 179, 0.1);
+}
+
+/* View containers */
+.wf-view { min-height: 100vh; }
+.wf-view.hidden { display: none; }
+
+/* ============================================================
+   8. BUTTONS
+   ============================================================ */
+.wf-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 10px 22px; border-radius: 99px;
+  font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  cursor: pointer; border: none;
+  transition: all var(--t-normal) var(--ease-spring);
+  text-decoration: none; white-space: nowrap;
+}
+.wf-btn:hover { transform: translateY(-1px); }
+.wf-btn:active { transform: translateY(0); }
+
+.wf-btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+}
+.wf-btn-primary:hover { box-shadow: var(--shadow-md); background: var(--accent-forest); }
+.dark .wf-btn-primary { background: var(--text-primary); color: var(--bg-primary); }
+
+.wf-btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+.wf-btn-secondary:hover { background: var(--bg-surface); border-color: var(--border-strong); }
+
+.wf-btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-medium);
+}
+.wf-btn-ghost:hover { background: var(--border); color: var(--text-primary); }
+
+.wf-btn-gold {
+  background: var(--accent-gold);
+  color: white;
+}
+.wf-btn-gold:hover { background: var(--accent-amber); box-shadow: 0 8px 20px rgba(196,148,30,0.35); }
+
+.wf-btn-outline-white {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+}
+.wf-btn-outline-white:hover { background: rgba(255,255,255,0.22); }
+
+.wf-btn-sm { padding: 7px 16px; font-size: 0.74rem; }
+.wf-btn-lg { padding: 14px 32px; font-size: 0.9rem; }
+.wf-btn-icon { padding: 9px; border-radius: 50%; width: 38px; height: 38px; }
+
+/* ============================================================
+   9. CARDS
+   ============================================================ */
+
+/* Base card */
+.wf-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+  transition: box-shadow var(--t-normal) var(--ease-smooth),
+              transform var(--t-normal) var(--ease-spring),
+              border-color var(--t-normal) var(--ease-smooth);
+}
+
+/* Interactive card with lift */
+.wf-card-lift {
+  cursor: pointer;
+}
+.wf-card-lift:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--border-medium);
+}
+
+/* Destination card — image + content */
+.wf-dest-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg-secondary);
+}
+.wf-dest-card-img {
+  width: 100%; display: block;
+  transition: transform var(--t-slow) var(--ease-spring);
+}
+.wf-dest-card:hover .wf-dest-card-img { transform: scale(1.05); }
+
+/* ============================================================
+   10. DESTINATION DETAIL PANEL
+   ============================================================ */
+.wf-dest-panel {
+  background: var(--bg-primary);
+  box-shadow: -20px 0 60px rgba(0,0,0,0.15);
+  border-left: 1px solid var(--border);
+}
+.dark .wf-dest-panel {
+  box-shadow: -20px 0 60px rgba(0,0,0,0.50);
+}
+
+/* ============================================================
+   11. FORM ELEMENTS
+   ============================================================ */
+.wf-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+  outline: none;
+}
+.wf-input:focus {
+  border-color: var(--accent-sage);
+  box-shadow: 0 0 0 3px rgba(74, 124, 111, 0.12);
+}
+.wf-input::placeholder { color: var(--text-faint); }
+
+.wf-select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+}
+.wf-select:focus { border-color: var(--accent-sage); }
+
+.wf-label-text {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.wf-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--t-fast);
+  min-height: 80px;
+}
+.wf-textarea:focus { border-color: var(--accent-sage); }
+
+/* ============================================================
+   12. BADGES & CHIPS
+   ============================================================ */
+.wf-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wf-badge-forest  { background: rgba(27,59,43,0.10); color: var(--text-primary); border: 1px solid rgba(27,59,43,0.15); }
+.wf-badge-sage    { background: rgba(74,124,111,0.12); color: var(--accent-sage); border: 1px solid rgba(74,124,111,0.2); }
+.wf-badge-gold    { background: rgba(196,148,30,0.12); color: var(--accent-gold); border: 1px solid rgba(196,148,30,0.2); }
+.wf-badge-terra   { background: rgba(193,68,14,0.10); color: var(--accent-terra); border: 1px solid rgba(193,68,14,0.18); }
+.wf-badge-muted   { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border); }
+.wf-badge-solid   { background: var(--text-primary); color: var(--bg-primary); }
+
+.dark .wf-badge-forest { background: rgba(158,191,179,0.12); color: var(--accent-mist); border-color: rgba(158,191,179,0.2); }
+
+/* Destination status */
+.wf-status-saved    { background: rgba(196,148,30,0.12); color: var(--accent-gold); }
+.wf-status-planning { background: rgba(74,124,111,0.12); color: var(--accent-sage); }
+.wf-status-booked   { background: rgba(27,59,43,0.12); color: var(--text-primary); }
+.wf-status-visited  { background: rgba(27,59,43,0.85); color: var(--bg-primary); }
+
+/* Filter chips */
+.wf-chip {
+  display: inline-flex; align-items: center;
+  padding: 6px 14px; border-radius: 99px;
+  font-size: 0.78rem; font-weight: 500;
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  cursor: pointer; white-space: nowrap;
+  transition: all var(--t-fast) var(--ease-smooth);
+}
+.wf-chip:hover { border-color: var(--border-strong); color: var(--text-primary); }
+.wf-chip.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+.dark .wf-chip.active {
+  background: var(--accent-sage);
+  color: var(--bg-primary);
+  border-color: var(--accent-sage);
+}
+
+/* ============================================================
+   13. HERO SECTIONS
+   ============================================================ */
+.wf-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wf-hero-curvy {
+  position: relative;
+  width: 100%;
+  border-radius: 0 0 3.5rem 3.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(10, 24, 16, 0.65), 0 0 0 1px rgba(196, 148, 30, 0.2);
+  border-bottom: 2px solid rgba(196, 148, 30, 0.28);
+}
+
+@media (min-width: 1024px) {
+  .wf-hero-curvy {
+    border-radius: 0 0 5rem 5rem;
+  }
+}
+
+.wf-curvy-glass-card {
+  background: linear-gradient(135deg, rgba(20, 45, 32, 0.72) 0%, rgba(10, 24, 17, 0.82) 100%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 2.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.wf-curvy-pill {
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.wf-curvy-pill:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  border-color: rgba(196, 148, 30, 0.5);
+}
+
+.wf-curvy-search-bar {
+  border-radius: 9999px;
+  background: rgba(10, 24, 17, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(196, 148, 30, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(196, 148, 30, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wf-curvy-search-bar:focus-within {
+  border-color: var(--accent-gold);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6), 0 0 35px rgba(196, 148, 30, 0.4);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.hero-thumb-btn {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero-thumb-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: rgba(196, 148, 30, 0.6);
+}
+
+.wf-hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-cinematic) var(--ease-spring);
+}
+
+.wf-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.70) 100%);
+  pointer-events: none;
+}
+
+.wf-hero-overlay-lr {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.20) 60%, rgba(0,0,0,0.0) 100%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   14. PASSPORT STYLES
+   ============================================================ */
+.wf-passport-cover {
+  background: linear-gradient(145deg, #1A3A2A 0%, #0F2318 40%, #1B3B2B 80%, #2A5040 100%);
+  position: relative;
+  overflow: hidden;
+}
+.wf-passport-cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 30% 50%, rgba(196,148,30,0.08) 0%, transparent 60%),
+                    radial-gradient(circle at 80% 20%, rgba(74,124,111,0.12) 0%, transparent 50%);
+}
+.wf-passport-cover::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(196,148,30,0.06)' stroke-width='0.5'%3E%3Ccircle cx='20' cy='20' r='18'/%3E%3Ccircle cx='20' cy='20' r='12'/%3E%3Ccircle cx='20' cy='20' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  opacity: 0.5;
+}
+
+.wf-passport-stamp {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid;
+  border-radius: 8px;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  opacity: 0.85;
+}
+.wf-passport-stamp::after {
+  content: '';
+  position: absolute; inset: -1px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%);
+}
+.wf-passport-stamp.visited {
+  border-color: rgba(196,148,30,0.6);
+  color: var(--accent-gold);
+  transform: rotate(-3deg);
+}
+.wf-passport-stamp.unvisited {
+  border-color: var(--border-medium);
+  color: var(--text-faint);
+  transform: rotate(2deg);
+}
+
+/* ============================================================
+   15. MAP STYLES
+   ============================================================ */
+.leaflet-container { font-family: var(--font-sans) !important; border-radius: var(--radius-md); }
+.leaflet-popup-content-wrapper {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border: 1px solid var(--border) !important;
+  padding: 4px !important;
+}
+.leaflet-popup-tip { background: var(--bg-surface) !important; }
+.dark .leaflet-tile { filter: invert(100%) hue-rotate(180deg) brightness(90%) contrast(88%) saturate(80%); }
+.wf-map-marker {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   16. TIMELINE
+   ============================================================ */
+.wf-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.wf-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent-sage) 0%, var(--border) 100%);
+}
+.wf-timeline-item {
+  position: relative;
+  padding-bottom: 24px;
+}
+.wf-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -24px; top: 4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--accent-sage);
+  box-shadow: 0 0 0 3px var(--bg-primary);
+}
+.wf-timeline-item.completed::before { background: var(--accent-sage); }
+
+/* ============================================================
+   17. SKELETON / LOADING STATES
+   ============================================================ */
+@keyframes shimmer {
+  0%   { background-position: -800px 0; }
+  100% { background-position: 800px 0; }
+}
+.wf-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-secondary) 0%,
+    var(--bg-surface) 30%,
+    var(--bg-secondary) 60%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.8s infinite linear;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   18. ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}
+
+.animate-fade-up   { animation: fadeUp   0.6s var(--ease-spring) forwards; opacity: 0; }
+.animate-fade-in   { animation: fadeIn   0.5s ease forwards; opacity: 0; }
+.animate-scale-in  { animation: scaleIn  0.5s var(--ease-spring) forwards; opacity: 0; }
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+/* Staggered grid items */
+.wf-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.wf-stagger > *:nth-child(2) { animation-delay: 0.10s; }
+.wf-stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.wf-stagger > *:nth-child(4) { animation-delay: 0.20s; }
+.wf-stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.wf-stagger > *:nth-child(6) { animation-delay: 0.30s; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   19. TOAST NOTIFICATIONS
+   ============================================================ */
+.wf-toast {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem; font-weight: 500;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  color: var(--text-primary);
+  pointer-events: all;
+  animation: slideInToast 0.4s var(--ease-spring) forwards;
+  backdrop-filter: blur(12px);
+  max-width: 320px;
+}
+@keyframes slideInToast {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+.wf-toast.toast-success { border-color: rgba(74,124,111,0.3); }
+.wf-toast.toast-error   { border-color: rgba(193,68,14,0.3); }
+.wf-toast.toast-info    { border-color: var(--border-medium); }
+
+/* ============================================================
+   20. COMMAND PALETTE
+   ============================================================ */
+.wf-cmd-result {
+  display: flex; align-items: center; gap-12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--t-fast);
+  gap: 12px;
+}
+.wf-cmd-result:hover { background: var(--bg-secondary); }
+
+/* ============================================================
+   21. COST CALCULATOR
+   ============================================================ */
+.wf-cost-bar {
+  height: 4px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--accent-sage), var(--accent-gold));
+  transition: width 0.8s var(--ease-spring);
+}
+
+/* ============================================================
+   22. SECTION SEPARATORS
+   ============================================================ */
+.wf-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+.wf-divider-gold {
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  height: 1px;
+}
+
+/* ============================================================
+   23. IMAGE WITH FALLBACK
+   ============================================================ */
+.wf-img-wrap {
+  position: relative;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+}
+.wf-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.wf-img-wrap img.error {
+  opacity: 0;
+}
+.wf-img-fallback {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--text-faint);
+  font-size: 2rem;
+  gap: 8px;
+}
+
+/* ============================================================
+   24. PROGRESS BARS
+   ============================================================ */
+.wf-progress {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+.wf-progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--accent-sage), var(--accent-gold));
+  transition: width 0.8s var(--ease-spring);
+}
+
+/* ============================================================
+   25. RESPONSIVE LAYOUT UTILITIES
+   ============================================================ */
+.wf-page-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 768px)  { .wf-page-content { padding: 0 32px; } }
+@media (min-width: 1024px) { .wf-page-content { padding: 0 48px; } }
+
+/* Mobile: extra bottom padding for the floating nav */
+.wf-view { padding-bottom: 100px; }
+@media (min-width: 1024px) { .wf-view { padding-bottom: 0; } }
+
+/* Safe area for iPhone notch */
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+/* Header height compensation */
+.wf-header-offset { padding-top: 80px; }
+
+/* ============================================================
+   26. SECTION HEADERS (editorial pattern)
+   ============================================================ */
+.wf-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.wf-section-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+/* ============================================================
+   27. EMPTY STATES
+   ============================================================ */
+.wf-empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 64px 24px;
+  min-height: 280px;
+  color: var(--text-muted);
+}
+.wf-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+.wf-empty-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.wf-empty-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   28. INTERACTIVE OVERLAY CARDS
+   ============================================================ */
+.wf-overlay-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+}
+.wf-overlay-card-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  transform: translateY(0);
+  transition: all var(--t-normal) var(--ease-smooth);
+}
+.wf-overlay-card-actions {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height var(--t-normal) var(--ease-smooth);
+}
+.wf-overlay-card:hover .wf-overlay-card-actions { max-height: 80px; }
+
+/* ============================================================
+   29. HORIZONTAL SCROLL STRIP
+   ============================================================ */
+.wf-h-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.wf-h-scroll::-webkit-scrollbar { display: none; }
+.wf-h-scroll > * { scroll-snap-align: start; flex-shrink: 0; }
+
+/* ============================================================
+   30. STAT BLOCKS (editorial, not dashboard cards)
+   ============================================================ */
+.wf-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wf-stat-num {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-primary);
+}
+.wf-stat-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Inline stat row on hero */
+.wf-stat-inline {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.wf-stat-inline .divider {
+  width: 1px; height: 32px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* ============================================================
+   31. SEARCH INPUT OVERRIDE
+   ============================================================ */
+#command-search-input {
+  background: transparent !important;
+  color: var(--text-primary);
+}
+#command-search-input::placeholder { color: var(--text-faint); }
+
+/* ============================================================
+   32. ORGANIC SECTION DIVIDERS & CONTOUR TRANSITIONS
+   Topographic, curved, and editorial section boundaries
+   ============================================================ */
+.wf-section-divider-curve {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-top: -24px;
+  margin-bottom: -24px;
+  z-index: 10;
+  pointer-events: none;
+}
+.wf-section-divider-curve svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--bg-primary);
+}
+
+.wf-section-divider-wave {
+  position: relative;
+  width: 100%;
+  height: 64px;
+  overflow: hidden;
+  line-height: 0;
+}
+.wf-section-divider-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 64px;
+  fill: var(--bg-secondary);
+}
+
+.wf-contour-bg {
+  background-image: radial-gradient(circle at 10% 20%, rgba(196, 148, 30, 0.05) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(74, 124, 111, 0.05) 0%, transparent 40%);
+}
+
+.dark .wf-contour-bg {
+  background-image: radial-gradient(circle at 10% 20%, rgba(196, 148, 30, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 90% 80%, rgba(74, 124, 111, 0.08) 0%, transparent 50%);
+}
+
+/* ============================================================
+   33. ANIMATION & MICRO-INTERACTION ENHANCEMENTS
+   Smooth spring transitions, button press pops, stamp rotation
+   ============================================================ */
+/* Button active click scale press */
+.wf-btn:active, button.wf-btn:active {
+  transform: scale(0.96) !important;
+  transition: transform 0.08s ease !important;
+}
+
+/* Card hover smooth lift */
+.wf-card-lift {
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), shadow 0.35s ease;
+}
+.wf-card-lift:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* Chip active pulse */
+.wf-chip.active {
+  animation: chipPulse 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes chipPulse {
+  0% { transform: scale(0.92); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Stamp hover rotation tilt */
+.wf-passport-stamp {
+  transition: transform 0.3s var(--ease-spring), opacity 0.3s ease, border-color 0.3s ease;
+}
+.wf-passport-stamp:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* Modal spring scale in */
+#dest-panel {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Progress bar smooth fill */
+.wf-progress-fill {
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Floating Travel Bag Badge */
+.wf-bag-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: badgePop 0.4s var(--ease-spring);
+}
+
+@keyframes badgePop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+/* Map popup animation */
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius-md) !important;
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--border-medium) !important;
+  animation: popupSlide 0.25s var(--ease-spring);
+}
+
+@keyframes popupSlide {
+  from { opacity: 0; transform: translateY(8px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ============================================================
+   34. IMAGE 1 — SHOWCASE HERO POD (ORIZON / MODERN LUXURY POD)
+   ============================================================ */
+.wf-showcase-wrapper {
+  position: relative;
+  background-color: #dfdbd3;
+  background-image: url('../NATURE/misty_mountains.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  padding: 85px 20px 40px 20px;
+  overflow: hidden;
+}
+
+.dark .wf-showcase-wrapper {
+  background-color: #121513;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('../NATURE/misty_mountains.jpg');
+}
+
+.wf-hero-pod {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 680px;
+  border-radius: 46px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 35px 80px -15px rgba(15, 23, 42, 0.45), 0 0 0 1px rgba(255,255,255,0.4) inset;
+  overflow: hidden;
+  background-color: #0b1713;
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .wf-hero-pod {
+    border-radius: 28px;
+    min-height: auto;
+  }
+  .wf-showcase-wrapper {
+    padding: 70px 12px 24px 12px;
+  }
+}
+
+.wf-pod-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.2s ease, transform 6s cubic-bezier(0.1, 0.9, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.wf-pod-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Top Pill Bar inside Pod */
+.wf-top-pill-bar {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(25px) saturate(190%);
+  -webkit-backdrop-filter: blur(25px) saturate(190%);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.16);
+  color: #1c1917;
+}
+
+.wf-top-pill-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.wf-top-pill-item:hover {
+  opacity: 0.85;
+}
+
+/* Floating Left Dock Inside Pod */
+.wf-pod-dock {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 30;
+}
+
+.wf-dock-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  font-size: 14px;
+  transition: all 0.2s var(--ease-spring);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wf-dock-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #111827;
+  transform: scale(1.12);
+}
+
+.wf-dock-btn.active {
+  background: #111827;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.3);
+}
+
+/* Bottom Left Bento Card */
+.wf-bento-left {
+  background: #ffffff;
+  color: #1c1917;
+  border-radius: 36px;
+  padding: 26px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+  max-width: 360px;
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+/* Bottom Right Frosted Glass Card */
+.wf-bento-right {
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 36px;
+  color: #ffffff;
+  padding: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.4);
+  max-width: 390px;
+  position: relative;
+}
+
+/* ============================================================
+   35. IMAGE 2 — APPLE VISION OS SPATIAL 3D GLASS STYLES
+   ============================================================ */
+.wf-vision-container {
+  position: relative;
+  min-height: 850px;
+  background-color: #1a1614;
+  background-image: url('../NATURE/vision_os_room.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  overflow: hidden;
+  padding: 85px 16px 50px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Top Safari / Vision OS Chrome Bar */
+.wf-vision-chrome {
+  background: rgba(42, 34, 30, 0.65);
+  backdrop-filter: blur(35px) saturate(190%);
+  -webkit-backdrop-filter: blur(35px) saturate(190%);
+  border: 1.2px solid rgba(255, 255, 255, 0.24);
+  border-radius: 9999px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255,255,255,0.25);
+  color: #f3f4f6;
+  max-width: 820px;
+  margin: 0 auto 24px auto;
+  padding: 6px 14px;
+}
+
+/* Left Vertical Spatial Tool Dock */
+.wf-vision-dock {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+  background: rgba(45, 36, 32, 0.65);
+  backdrop-filter: blur(35px) saturate(180%);
+  -webkit-backdrop-filter: blur(35px) saturate(180%);
+  border: 1.2px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 40;
+}
+
+.wf-vision-dock-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  transition: all 0.25s var(--ease-spring);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wf-vision-dock-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+/* 3D Spatial Carousel Stage */
+.wf-vision-stage {
+  perspective: 1600px;
+  perspective-origin: center 45%;
+  transform-style: preserve-3d;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wf-vision-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* Individual Glass Spatial Card */
+.wf-vision-card {
+  position: absolute;
+  width: 380px;
+  max-width: 90vw;
+  height: 510px;
+  border-radius: 34px;
+  background: rgba(55, 46, 41, 0.62);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255,255,255,0.45);
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.25, 1), opacity 0.5s ease, filter 0.5s ease, box-shadow 0.4s ease;
+  will-change: transform, opacity, filter;
+}
+
+.wf-vision-card.center {
+  transform: translateX(0) translateZ(80px) rotateY(0deg);
+  opacity: 1;
+  filter: blur(0px);
+  z-index: 30;
+  cursor: default;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.75), inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.wf-vision-card.left-1 {
+  transform: translateX(-260px) translateZ(-80px) rotateY(20deg);
+  opacity: 0.85;
+  filter: blur(0.4px);
+  z-index: 20;
+}
+
+.wf-vision-card.left-2 {
+  transform: translateX(-480px) translateZ(-240px) rotateY(32deg);
+  opacity: 0.55;
+  filter: blur(2px);
+  z-index: 10;
+}
+
+.wf-vision-card.right-1 {
+  transform: translateX(260px) translateZ(-80px) rotateY(-20deg);
+  opacity: 0.85;
+  filter: blur(0.4px);
+  z-index: 20;
+}
+
+.wf-vision-card.right-2 {
+  transform: translateX(480px) translateZ(-240px) rotateY(-32deg);
+  opacity: 0.55;
+  filter: blur(2px);
+  z-index: 10;
+}
+
+.wf-vision-card.hidden-card {
+  transform: translateZ(-400px) scale(0.6);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .wf-vision-card {
+    width: 320px;
+    height: 480px;
+  }
+  .wf-vision-card.left-1 {
+    transform: translateX(-160px) translateZ(-80px) rotateY(16deg);
+    opacity: 0.6;
+  }
+  .wf-vision-card.right-1 {
+    transform: translateX(160px) translateZ(-80px) rotateY(-16deg);
+    opacity: 0.6;
+  }
+  .wf-vision-card.left-2, .wf-vision-card.right-2 {
+    display: none;
+  }
+  .wf-vision-dock {
+    display: none;
+  }
+}
+
+/* Bottom Controller Floating above Table */
+.wf-vision-controller {
+  background: rgba(38, 30, 26, 0.72);
+  backdrop-filter: blur(35px) saturate(180%);
+  -webkit-backdrop-filter: blur(35px) saturate(180%);
+  border: 1.2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.3);
+  color: #ffffff;
+  padding: 7px 18px;
+  margin: 18px auto 8px auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.wf-vision-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease;
+}
+
+.wf-vision-dot.active {
+  width: 18px;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+
+/* ============================================================
+   36. PREMIUM UX POLISH � Flow, Transitions & Micro-Interactions
+   ============================================================ */
+
+/* ---- View Transition (fade between modules) ---- */
+.wf-view:not(.hidden) {
+  animation: viewEnter 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes viewEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Focus rings for keyboard accessibility ---- */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ---- Nav Button Active Indicator dot ---- */
+.wf-nav-btn.active { position: relative; }
+.wf-nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+
+/* ---- Destination Card hover glow ring ---- */
+.wf-dest-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.4s ease;
+}
+.wf-dest-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.25), 0 0 0 1px rgba(196,148,30,0.2);
+}
+.dark .wf-dest-card:hover {
+  box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(196,148,30,0.35);
+}
+
+/* ---- Save button bounce animation ---- */
+@keyframes savePop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.7); }
+  70%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+.save-pop { animation: savePop 0.4s var(--ease-spring); }
+
+/* ---- Destination card image zoom ---- */
+.wf-dest-card img {
+  transition: transform 0.7s var(--ease-spring);
+}
+.wf-dest-card:hover img { transform: scale(1.08); }
+
+/* ---- Toast enhanced ---- */
+.wf-toast {
+  animation: toastIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes toastIn {
+  from { transform: translateX(110%) scale(0.9); opacity: 0; }
+  to   { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+/* ---- Bento card hover ---- */
+.wf-bento-left, .wf-bento-right {
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s ease;
+}
+.wf-bento-left:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 65px rgba(0,0,0,0.3);
+}
+.wf-bento-right:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 75px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/* ---- Hero pod image crossfade ---- */
+#hero-pod-main-img {
+  transition: opacity 0.5s ease, transform 7s cubic-bezier(0.1, 0.9, 0.2, 1);
+  transform: scale(1.04);
+}
+.wf-hero-pod:hover #hero-pod-main-img { transform: scale(1.0); }
+
+/* ---- Vision OS deep backdrop ---- */
+.wf-vision-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(20,15,12,0.35) 0%, rgba(20,15,12,0.0) 40%, rgba(20,15,12,0.6) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.wf-vision-container > * { position: relative; z-index: 2; }
+
+/* ---- Floating back-to-top button ---- */
+#back-to-top {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  z-index: 55;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s var(--ease-spring);
+  pointer-events: none;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  border: none;
+}
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+#back-to-top:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+@media (min-width: 1024px) { #back-to-top { bottom: 36px; right: 28px; } }
+
+/* ---- Page loader bar ---- */
+#wf-page-loader {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  z-index: 9999;
+  background: linear-gradient(90deg, var(--accent-sage), var(--accent-gold), var(--accent-sage));
+  background-size: 200% 100%;
+  animation: loaderBar 1.4s linear infinite;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+#wf-page-loader.hidden { opacity: 0; }
+@keyframes loaderBar {
+  0%   { background-position: 0% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ---- Stamp earned animation ---- */
+@keyframes stampEarned {
+  0%   { transform: scale(2) rotate(-10deg); opacity: 0; }
+  60%  { transform: scale(0.9) rotate(3deg); opacity: 1; }
+  80%  { transform: scale(1.05) rotate(-1deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+}
+.stamp-earned { animation: stampEarned 0.7s var(--ease-spring) forwards; }
+
+/* ---- Explore filter bar shadow ---- */
+.wf-explore .sticky { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.dark .wf-explore .sticky { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+/* ---- Category chips mask ---- */
+.wf-h-scroll {
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 95%, transparent 100%);
+}
+.wf-h-scroll.no-mask { mask-image: none; -webkit-mask-image: none; }
+
+/* ---- Empty state float ---- */
+.wf-empty-icon { animation: emptyFloat 3s ease-in-out infinite; }
+@keyframes emptyFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ---- Mobile nav active glow ---- */
+.wf-mob-btn.active { color: var(--accent-sage); }
+.dark .wf-mob-btn.active svg { filter: drop-shadow(0 0 6px rgba(158,191,179,0.6)); }
+
+/* ---- Scrollbar for panels ---- */
+#dest-panel::-webkit-scrollbar { width: 4px; }
+#dest-panel::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 99px; }
+#travel-bag-panel::-webkit-scrollbar { width: 4px; }
+#travel-bag-panel::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 99px; }
+
+/* ---- Map container ---- */
+#wf-map-container, #leaflet-map { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+
+/* ---- Vision OS Card center hover ---- */
+.wf-vision-card.center:hover {
+  box-shadow: 0 50px 100px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.7), 0 0 40px rgba(196,148,30,0.15);
+}
+
+/* ---- Chip active tap ---- */
+.wf-chip:active { transform: scale(0.93) !important; }
+
+/* ---- Passport book texture ---- */
+.wf-passport-page {
+  background: linear-gradient(rgba(196,148,30,0.02) 1px, transparent 1px), var(--bg-surface);
+  background-size: 100% 32px;
+}
+
+/* ---- Section eyebrow ---- */
+.wf-section-eyebrow { letter-spacing: 0.22em; }
+
+/* ============================================================
+   37. ANTARA HERO � New Landing Page Design v3.0
+   ============================================================ */
+
+/* ---- Full-screen hero container ---- */
+.antara-hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .antara-hero {
+    grid-template-columns: 1fr 1fr;
+    min-height: 100svh;
+  }
+}
+
+/* ---- Background layers crossfade ---- */
+.antara-hero-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.antara-hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  will-change: opacity;
+}
+.antara-hero-bg-layer.active {
+  opacity: 1;
+}
+
+/* ---- Cinematic overlays ---- */
+.antara-hero-overlay-left {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(8,18,12,0.82) 0%, rgba(8,18,12,0.55) 45%, rgba(8,18,12,0.0) 72%);
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .antara-hero-overlay-left {
+    background: rgba(8,18,12,0.68);
+  }
+}
+.antara-hero-overlay-bottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(8,18,12,0.85) 0%, transparent 100%);
+  z-index: 1;
+}
+.antara-hero-overlay-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 25%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%);
+  z-index: 1;
+}
+
+/* ---- Film grain texture ---- */
+.antara-hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+/* ---- Hero left content panel ---- */
+.antara-hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 120px 48px 160px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+@media (max-width: 1024px) { .antara-hero-content { padding: 110px 28px 170px 28px; } }
+@media (max-width: 767px)  { .antara-hero-content { padding: 100px 20px 200px 20px; max-width: 100%; } }
+
+/* ---- Status pill ---- */
+.antara-hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.85);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  width: fit-content;
+}
+
+/* ---- Hero title block ---- */
+.antara-hero-title { display: flex; flex-direction: column; gap: 8px; }
+.antara-hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+.antara-hero-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.0;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  transition: all 0.4s var(--ease-spring);
+}
+.antara-hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 1.5vw, 1.05rem);
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  max-width: 480px;
+  font-weight: 300;
+}
+
+/* ---- Stats row ---- */
+.antara-hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.antara-stat-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 20px;
+}
+.antara-stat-block:first-child { padding-left: 0; }
+.antara-stat-num {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.95);
+  line-height: 1;
+  transition: all 0.3s var(--ease-spring);
+}
+.antara-stat-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.antara-stat-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.18);
+  flex-shrink: 0;
+}
+
+/* ---- Tags ---- */
+.antara-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 11px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+.antara-tag:hover { background: rgba(196,148,30,0.25); border-color: rgba(196,148,30,0.5); color: #f5d48a; }
+
+/* ---- CTA Buttons ---- */
+.antara-hero-actions { display: flex; align-items: center; gap: 12px; }
+.antara-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 99px;
+  background: var(--accent-gold);
+  color: #111;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.28s var(--ease-spring);
+  box-shadow: 0 8px 24px rgba(196,148,30,0.4);
+}
+.antara-btn-primary:hover {
+  background: #d4a628;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(196,148,30,0.55);
+}
+.antara-btn-primary:active { transform: translateY(0) scale(0.97); }
+.antara-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.22);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: all 0.28s var(--ease-spring);
+}
+.antara-btn-ghost:hover {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---- Right side card stack ---- */
+.antara-hero-card-stack {
+  position: relative;
+  z-index: 10;
+  padding: 120px 52px 100px 0;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media (max-width: 1200px) { .antara-hero-card-stack { padding: 120px 28px 100px 0; } }
+
+/* ---- Feature card ---- */
+.antara-feature-card {
+  width: 340px;
+  background: rgba(20, 30, 24, 0.7);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255,255,255,0.28);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s ease;
+}
+.antara-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+.antara-feature-card-img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.antara-feature-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-spring), opacity 0.3s ease;
+}
+.antara-feature-card:hover .antara-feature-card-img img { transform: scale(1.05); }
+.antara-feature-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.6) 100%);
+}
+.antara-feature-card-body { padding: 16px 18px 18px; }
+.antara-card-badge {
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(196,148,30,0.25);
+  border: 1px solid rgba(196,148,30,0.45);
+  color: #f5d48a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+.antara-card-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-spring);
+}
+.antara-card-action-btn:hover { background: rgba(196,148,30,0.5); border-color: rgba(196,148,30,0.7); transform: scale(1.1); }
+.antara-card-action-active { background: rgba(196,148,30,0.7) !important; border-color: rgba(196,148,30,0.9) !important; }
+
+/* ---- Mini stat card ---- */
+.antara-mini-stat-card {
+  width: 185px;
+  background: rgba(15, 24, 18, 0.75);
+  backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  border-radius: 20px;
+  padding: 14px 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  align-self: flex-start;
+  transition: transform 0.3s var(--ease-spring);
+}
+.antara-mini-stat-card:hover { transform: translateY(-3px); }
+
+/* ---- Season card ---- */
+.antara-season-card {
+  width: 185px;
+  background: rgba(15, 24, 18, 0.75);
+  backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  border-radius: 20px;
+  padding: 12px 14px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  transition: transform 0.3s var(--ease-spring);
+}
+.antara-season-card:hover { transform: translateY(-3px); }
+
+/* ---- Destination switcher pills ---- */
+.antara-hero-switcher {
+  position: absolute;
+  bottom: 68px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 0 52px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) { .antara-hero-switcher { padding: 0 20px; bottom: 72px; } }
+
+.antara-spot-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.28s var(--ease-spring);
+}
+.antara-spot-pill:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
+}
+.antara-spot-pill.active {
+  background: rgba(196,148,30,0.28);
+  border-color: rgba(196,148,30,0.6);
+  color: #f5d48a;
+  font-weight: 700;
+  transform: scale(1.04);
+}
+.antara-spot-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.antara-spot-pill.active .antara-spot-pill-dot {
+  background: var(--accent-gold);
+  box-shadow: 0 0 6px rgba(196,148,30,0.8);
+}
+
+/* ---- Progress bar ---- */
+.antara-hero-progress {
+  position: absolute;
+  bottom: 58px;
+  left: 52px;
+  right: 52px;
+  z-index: 20;
+  height: 2px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+@media (max-width: 767px) { .antara-hero-progress { left: 20px; right: 20px; bottom: 62px; } }
+.antara-hero-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-gold), rgba(255,255,255,0.7));
+  border-radius: 99px;
+  transition: width 0.1s linear;
+}
+
+/* ---- Global stats strip ---- */
+.antara-hero-globalstats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 12px 52px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 767px) { .antara-hero-globalstats { padding: 10px 20px; } }
+.antara-gstat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+@media (max-width: 480px) { .antara-gstat { padding: 0 12px; } }
+.antara-gstat-num {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+  line-height: 1;
+}
+.antara-gstat-label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 2px;
+}
+.antara-gstat-sep {
+  width: 1px;
+  height: 24px;
+  background: rgba(255,255,255,0.12);
+}
+
+/* ============================================================
+   38. ANTARA SEARCH SECTION
+   ============================================================ */
+.antara-search-section {
+  padding: 0 16px;
+  margin-top: -32px;
+  position: relative;
+  z-index: 30;
+}
+@media (min-width: 768px) { .antara-search-section { padding: 0 32px; margin-top: -36px; } }
+@media (min-width: 1024px) { .antara-search-section { padding: 0 52px; margin-top: -40px; } }
+
+.antara-search-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: 6px 8px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.antara-search-card:focus-within {
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-xl), 0 0 0 3px rgba(196,148,30,0.12);
+}
+.antara-search-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+}
+.antara-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  min-width: 0;
+}
+.antara-search-input::placeholder { color: var(--text-faint); }
+.antara-search-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border-medium);
+  flex-shrink: 0;
+}
+.antara-quick-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-spring);
+  white-space: nowrap;
+}
+.antara-quick-chip:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
+}
+.antara-search-go {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s var(--ease-spring);
+}
+.antara-search-go:hover { background: var(--accent-gold); transform: scale(1.05); }
+
+/* ============================================================
+   39. WEEKEND BANNER
+   ============================================================ */
+.antara-weekend-banner {
+  position: relative;
+  background: linear-gradient(135deg, #0f2318 0%, #1a3820 50%, #0c1b12 100%);
+  border-radius: var(--radius-xl);
+  padding: 22px 28px;
+  border: 1px solid rgba(196,148,30,0.3);
+  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(196,148,30,0.15);
+  overflow: hidden;
+}
+.antara-weekend-glow {
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196,148,30,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.antara-weekend-icon {
+  width: 44px; height: 44px;
+  border-radius: 14px;
+  background: rgba(196,148,30,0.18);
+  border: 1px solid rgba(196,148,30,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.antara-weekend-pill {
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.antara-weekend-pill:hover { background: rgba(255,255,255,0.18); color: #fff; }
+.antara-weekend-pill-primary {
+  padding: 6px 16px;
+  border-radius: 99px;
+  background: var(--accent-gold);
+  border: none;
+  color: #111;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-spring);
+}
+.antara-weekend-pill-primary:hover { background: #d4a628; transform: translateY(-1px); }
+
+/* ============================================================
+   40. OS MODULES GRID
+   ============================================================ */
+.antara-modules-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.antara-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 640px) { .antara-modules-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .antara-modules-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; } }
+
+.antara-module-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-spring);
+  text-align: left;
+  gap: 6px;
+}
+.antara-module-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px) scale(1.01);
+}
+.antara-module-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  transition: transform 0.2s var(--ease-spring);
+}
+.antara-module-card:hover .antara-module-icon { transform: scale(1.1) rotate(-3deg); }
+.antara-module-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s var(--ease-spring);
+}
+.antara-module-card:hover .antara-module-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   41. FEATURED DESTINATION HORIZONTAL SCROLL
+   ============================================================ */
+.antara-featured-section {
+  padding: 40px 0 20px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+.antara-featured-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.antara-featured-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 4px;
+}
+.antara-featured-scroll::-webkit-scrollbar { display: none; }
+.antara-featured-scroll > * { scroll-snap-align: start; flex-shrink: 0; }
+
+/* ---- Destination card ---- */
+.antara-dest-card {
+  width: 265px;
+  height: 360px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+.antara-dest-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 24px 52px rgba(0,0,0,0.25);
+}
+.antara-dest-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-secondary);
+}
+.antara-dest-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s var(--ease-spring);
+}
+.antara-dest-card:hover .antara-dest-img { transform: scale(1.07); }
+.antara-dest-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.88) 100%);
+}
+.antara-dest-save-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-spring);
+  z-index: 5;
+}
+.antara-dest-save-btn:hover { background: rgba(196,148,30,0.5); border-color: rgba(196,148,30,0.7); transform: scale(1.1); }
+.antara-dest-save-active { background: rgba(196,148,30,0.75) !important; }
+.antara-dest-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.antara-dest-info {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 16px;
+}
+
+/* ============================================================
+   42. JOURNEY SUMMARY CARD
+   ============================================================ */
+.antara-journey-card {
+  background: linear-gradient(135deg, #0a1a10 0%, #142218 40%, #0d1e14 100%);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  border: 1px solid rgba(196,148,30,0.25);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .antara-journey-card { grid-template-columns: 1fr 1fr; }
+}
+.antara-journey-card::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 250px; height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196,148,30,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.antara-journey-btn-primary {
+  padding: 10px 22px;
+  border-radius: 99px;
+  background: var(--accent-gold);
+  color: #111;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-spring);
+}
+.antara-journey-btn-primary:hover { background: #d4a628; transform: translateY(-1px); }
+.antara-journey-btn-ghost {
+  padding: 10px 22px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.antara-journey-btn-ghost:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.antara-journey-right {
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.antara-journey-stat {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s var(--ease-spring);
+}
+.antara-journey-stat:hover { transform: translateY(-3px); background: rgba(255,255,255,0.08); }
+
+/* ============================================================
+   43. TRIP TEASER CARD
+   ============================================================ */
+.antara-trip-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+}
+.antara-trip-teaser:hover { box-shadow: var(--shadow-md); }

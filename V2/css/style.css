@@ -1,0 +1,339 @@
+/* ==========================================================================
+   WAYFARER V2 — Commercial-Grade Travel Intelligence OS Design System
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sacramento&display=swap');
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS (LIGHT WARM EDITORIAL / DEEP OBSIDIAN)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Default: Warm Ivory Editorial Theme */
+  --bg-app: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F4F1EA;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-hover: rgba(255, 255, 255, 0.94);
+  --bg-card: rgba(255, 255, 255, 0.88);
+
+  --border-subtle: rgba(28, 25, 23, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.65);
+  --border-accent: rgba(27, 59, 43, 0.35);
+
+  --text-main: #1C1917;
+  --text-muted: #57534E;
+  --text-light: #78716C;
+
+  --accent-forest: #1B3B2B;
+  --accent-forest-light: #2A5640;
+  --accent-gold: #C5A059;
+  --accent-amber: #D97706;
+  --accent-emerald: #059669;
+  --accent-sky: #0284C7;
+
+  --shadow-soft: 0 10px 30px -5px rgba(28, 25, 23, 0.05);
+  --shadow-spatial: 0 20px 50px -10px rgba(28, 25, 23, 0.12);
+  --shadow-hover: 0 30px 60px -12px rgba(28, 25, 23, 0.18);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-script: 'Sacramento', cursive;
+}
+
+/* Deep Obsidian Mode */
+html.dark {
+  --bg-app: #0B120E;
+  --bg-surface: #121A15;
+  --bg-surface-elevated: #17241D;
+  --bg-glass: rgba(18, 26, 21, 0.82);
+  --bg-glass-hover: rgba(25, 36, 29, 0.92);
+  --bg-card: rgba(18, 26, 21, 0.85);
+
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.15);
+  --border-accent: rgba(2, 195, 154, 0.45);
+
+  --text-main: #F5F5F0;
+  --text-muted: #A3C9AB;
+  --text-light: #7A8C7C;
+
+  --accent-forest: #02C39A;
+  --accent-forest-light: #00A896;
+  --accent-gold: #E5C158;
+  --accent-amber: #F59E0B;
+  --accent-emerald: #10B981;
+  --accent-sky: #38BDF8;
+
+  --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+  --shadow-spatial: 0 25px 70px -10px rgba(0, 0, 0, 0.65);
+  --shadow-hover: 0 35px 80px -15px rgba(0, 0, 0, 0.8);
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE RESETS & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+.font-script { font-family: var(--font-script); }
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(27, 59, 43, 0.25);
+  border-radius: 10px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(2, 195, 154, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(27, 59, 43, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* --------------------------------------------------------------------------
+   3. SPATIAL GLASS & CARDS
+   -------------------------------------------------------------------------- */
+.spatial-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-spatial);
+}
+
+.editorial-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card-interactive {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.editorial-card-interactive:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION & PILL CONTROLS
+   -------------------------------------------------------------------------- */
+.nav-pill-active {
+  background: var(--accent-forest) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(27, 59, 43, 0.25);
+}
+
+html.dark .nav-pill-active {
+  background: #02C39A !important;
+  color: #0A1A14 !important;
+  box-shadow: 0 4px 20px rgba(2, 195, 154, 0.35);
+}
+
+.btn-editorial-pill {
+  background: var(--accent-forest);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(27, 59, 43, 0.2);
+}
+
+html.dark .btn-editorial-pill {
+  background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+  color: #0A1A14;
+  box-shadow: 0 8px 24px rgba(2, 195, 154, 0.35);
+}
+
+.btn-editorial-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(27, 59, 43, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   5. VERTICAL CIRCLE PREVIEW STACK (REFERENCE 1)
+   -------------------------------------------------------------------------- */
+.circle-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.circle-preview-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.circle-preview-item:hover .circle-preview-img {
+  transform: scale(1.15);
+  border-color: var(--accent-forest);
+  box-shadow: 0 12px 28px rgba(27, 59, 43, 0.4);
+}
+
+html.dark .circle-preview-item:hover .circle-preview-img {
+  border-color: #02C39A;
+  box-shadow: 0 12px 28px rgba(2, 195, 154, 0.5);
+}
+
+.circle-preview-img.active {
+  border-color: var(--accent-forest);
+  outline: 4px solid rgba(27, 59, 43, 0.25);
+  transform: scale(1.1);
+}
+
+html.dark .circle-preview-img.active {
+  border-color: #02C39A;
+  outline: 4px solid rgba(2, 195, 154, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   6. VISIONOS 3D SPATIAL CAROUSEL (REFERENCE 2)
+   -------------------------------------------------------------------------- */
+.spatial-3d-container {
+  perspective: 1200px;
+}
+
+.spatial-3d-card {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.spatial-3d-card.center {
+  transform: translateZ(50px) scale(1.04);
+  opacity: 1;
+  z-index: 30;
+  border-color: var(--accent-forest);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .spatial-3d-card.center {
+  border-color: rgba(2, 195, 154, 0.5);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
+}
+
+.spatial-3d-card.left {
+  transform: translateX(-35%) translateZ(-40px) rotateY(16deg) scale(0.92);
+  opacity: 0.75;
+  z-index: 20;
+}
+
+.spatial-3d-card.right {
+  transform: translateX(35%) translateZ(-40px) rotateY(-16deg) scale(0.92);
+  opacity: 0.75;
+  z-index: 20;
+}
+
+/* --------------------------------------------------------------------------
+   7. REGION TAB STRIP (REFERENCE 4)
+   -------------------------------------------------------------------------- */
+.region-tab-item {
+  position: relative;
+  padding-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.region-tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(27, 59, 43, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   8. STATUS BADGES & STAMPED PASSPORT
+   -------------------------------------------------------------------------- */
+.badge-dreaming { background: rgba(147, 197, 253, 0.18); color: #2563EB; border: 1px solid rgba(147, 197, 253, 0.4); }
+.badge-researching { background: rgba(253, 224, 71, 0.18); color: #D97706; border: 1px solid rgba(253, 224, 71, 0.4); }
+.badge-planning { background: rgba(251, 146, 60, 0.18); color: #EA580C; border: 1px solid rgba(251, 146, 60, 0.4); }
+.badge-booked { background: rgba(167, 139, 250, 0.18); color: #7C3AED; border: 1px solid rgba(167, 139, 250, 0.4); }
+.badge-visited { background: rgba(74, 222, 128, 0.18); color: #15803D; border: 1px solid rgba(74, 222, 128, 0.4); }
+
+html.dark .badge-dreaming { color: #93C5FD; }
+html.dark .badge-researching { color: #FDE047; }
+html.dark .badge-planning { color: #FB923C; }
+html.dark .badge-booked { color: #A78BFA; }
+html.dark .badge-visited { color: #4ADE80; }
+
+.passport-stamp {
+  border: 2px dashed var(--accent-gold);
+  border-radius: 50%;
+  padding: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-4deg);
+  transition: transform 0.3s ease;
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.passport-stamp:hover {
+  transform: rotate(0deg) scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   9. LEAFLET OVERRIDES
+   -------------------------------------------------------------------------- */
+.leaflet-container {
+  background-color: var(--bg-app) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--bg-glass) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-glass) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-spatial) !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--bg-glass) !important;
+}
