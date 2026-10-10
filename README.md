@@ -12,12 +12,13 @@ Open http://127.0.0.1:5173. No package installation or build is required. Extern
 
 ## What works
 
-- 194 destination entries, paginated search, district/category/distance/budget filters, photo-only and unvisited filters, quick escape suggestions, India scope, and a map.
+- 702 destination entries (459 Odisha, 243 elsewhere in India), paginated search, district/category/distance/budget filters, photo-only, visited and unvisited filters, an Odisha / All India segmented switch, unvisited surprise picks, and a map.
 - Destination details with official overview links and explicit information status.
 - Three-place comparison, quick journey additions, nearby-stop ordering, individual travel legs, driving-route links, and a downloadable itinerary.
 - Editable fuel, mileage, speed, road-distance assumptions, food, stay, activity, and contingency budgets.
-- A personal passport with dated stamps, field notes, district counts, yearly bucket lists, a yearly goal, and milestones.
-- Browser-local persistence with passport backup export/import.
+- A graphical passport with colourful illustrated stamps, stamp search/year/district filters, a district collection quilt, yearly progress ring, visit timeline, yearly bucket lists and milestones.
+- Quick dated visit marking on cards; visited entries disappear from Discover but remain in Explore.
+- Browser-local persistence with passport backup export/import and optional private Supabase account backups.
 - Desktop and mobile layouts, visible keyboard focus, native dialogs, and reduced-motion support.
 
 ## Planning defaults
@@ -26,11 +27,11 @@ Cuttack city centre; ₹110/litre petrol; 70 km/h cruising assumption. Mileage s
 
 ## Information status
 
-The current catalogue contains 155 Odisha and 39 India entries. The official Odisha Tourism directory contributed 111 source-linked records, including 53 additional attractions. Three repeated inherited entries are consolidated without losing passport data. See `CATALOGUE-SOURCES.md` for coverage and import instructions. Current tariffs, permits, openings, facilities, and travel conditions have **not** been independently verified. There is no live price, traffic, weather, or automatic data-refresh service.
+The current catalogue contains 459 Odisha and 243 other India entries. The official government list of 378 centres added 304 entries after matching 74 to the existing catalogue; 204 new India reference entries come from exact Wikipedia articles. The official Odisha Tourism directory contributed 111 source-linked records, including 53 additional attractions. Three repeated inherited entries are consolidated without losing passport data. See `CATALOGUE-SOURCES.md` for coverage and import instructions. Current tariffs, permits, openings, facilities, and travel conditions have **not** been independently verified. There is no live price, traffic, weather, or automatic data-refresh service.
 
-The home hero now uses a real Deomali photograph. Destination photos come from Odisha Tourism and Wikipedia/Wikimedia, with exact subjects and attribution links. Reuse rights are not assumed. Places without sourced photos use explicit placeholders. Personal records stay in the current browser and do not sync between devices or between local and hosted origins. Existing legacy storage is preserved.
+Discover only recommends unvisited entries; its real place hero and editorial photographs also move on when their destination is visited. Destination photos come from Odisha Tourism and Wikipedia/Wikimedia, with exact subjects and attribution links. Reuse rights are not assumed. Places without sourced photos use explicit placeholders. Personal records stay in the current browser until explicitly saved online through My account. Account backup/restore is manual; local and hosted origins keep separate local data. Existing legacy storage is preserved.
 
-Supabase SQL migration, catalogue seed, and setup notes are in `supabase/`. The schema is prepared and locally tested; the current website has no Supabase account connection or cloud sync.
+Supabase SQL migration, catalogue seed, and setup notes are in `supabase/`. The schema is already applied in the connected project. After this catalogue expansion, run the updated idempotent seed.sql in SQL Editor; do not rerun the initial migration. My account provides email/password Auth and explicit owner-protected cloud backups.
 
 ## Validation
 

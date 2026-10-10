@@ -45,6 +45,6 @@ await db.exec(`insert into avara_trips(user_id,name) values('${A}','Second trip'
 assert.equal((await db.query(`delete from avara_trips where user_id='${A}' returning id`)).rows.length,2);
 await role('anon');assert.equal((await db.query("select * from avara_destinations where id='private-draft'")).rows.length,0);
 await denied("insert into avara_destinations(id,name,region,category) values('bad','Bad','Odisha','Nature')");
-await role('postgres');assert.equal((await db.query('select count(*)::int as n from avara_destinations where published')).rows[0].n,194);
+await role('postgres');assert.equal((await db.query('select count(*)::int as n from avara_destinations where published')).rows[0].n,702);
 assert.equal((await db.query("select count(*)::int as n from pg_class where relname like 'avara_%' and relkind='r' and relrowsecurity")).rows[0].n,16);
 await db.close();console.log(`Passed migration, seed, ${checks}+ CRUD/RLS checks, cross-owner trip links, hidden drafts, and budget constraints in embedded PostgreSQL.`);
