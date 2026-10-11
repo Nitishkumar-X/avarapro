@@ -55,3 +55,5 @@ Browser QA covered search, map tiles, budget overrides, itinerary creation, note
 Source synchronization and deployment use the Sites plugin workflow; credentials are not stored in this project.
 
 Supabase is connected for optional manual passport backup through **My account**. See `supabase/README.md` for project setup, email confirmation and storage behavior. The app does not upload personal data automatically.
+
+Calendar and downloadable passport artwork: see [docs/JOURNAL-UPGRADE.md](docs/JOURNAL-UPGRADE.md).

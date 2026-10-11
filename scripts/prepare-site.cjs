@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),target=path.join(root,process.argv[2]||'avara-site');
-const source=['index.html','css/avara.css','css/passport.css','js/passport.js','js/data/expandedData.js','js/avara.js','js/cloud.js','js/vendor/supabase.js','js/data/officialData.js','js/data/catalogueConfig.js','js/data/indiaPhotos.js','js/data/odishaData.js','js/data/indiaData.js'];
+const source=['index.html','css/avara.css','css/passport.css','css/journal.css','js/passport.js','js/journal.js','js/data/holidays.js','js/data/expandedData.js','js/avara.js','js/cloud.js','js/vendor/supabase.js','js/data/officialData.js','js/data/catalogueConfig.js','js/data/indiaPhotos.js','js/data/odishaData.js','js/data/indiaData.js'];
 for(const relative of source){for(const prefix of ['', 'dist']){const out=path.join(target,prefix,relative);fs.mkdirSync(path.dirname(out),{recursive:true});fs.copyFileSync(path.join(root,relative),out)}}
 const manifestPath=path.join(target,'.openai','hosting.json');const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));manifest.static={directory:'dist'};const tmp=manifestPath+'.tmp';fs.writeFileSync(tmp,JSON.stringify(manifest,null,2)+'\n');fs.renameSync(tmp,manifestPath);
 fs.writeFileSync(path.join(target,'.gitignore'),'dist/\n.sites-runtime/\nnode_modules/\n*.tar.gz\n');
